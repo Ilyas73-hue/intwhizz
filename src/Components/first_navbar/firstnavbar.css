@@ -1,0 +1,132 @@
+/* import google font */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/* import main things */
+
+:root{
+    --primary-color: #363896;
+    --color: #FFFFFF;
+    --font: "Outfit", sans-serif;
+}
+
+#first_navbar{
+    background-color: var(--primary-color);
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+#first_navbar2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#first_navbar4{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+}
+
+#first_navbar4-1{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+}
+
+#first_navbar4-phone-icon{
+  color: var(--color);
+}
+
+#first_navbar-phone-text{
+    color: var(--color);
+    font-family: var(--font);
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 13px;
+}
+
+
+
+#first_navbar4-2-vl{
+    border-left: 2px solid var(--color);
+    height: 15px;
+    margin-bottom: 5px;
+}
+
+#first_navbar4-3{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 7px;
+}
+
+#first_navbar4-email-icon{
+    color: var(--color);
+    font-size: 20px;
+    margin-bottom: 6px;
+}
+
+#first_navbar4-email-text{
+    color: var(--color);
+    font-family: var(--font);
+    font-family: 12px;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+
+#first_navbar5{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+#first_navbar5-text{
+   color: var(--color);
+   font-family: var(--font);
+   font-weight: 700;
+   font-size: 15px;
+   margin-top: 15px;
+}
+
+
+#first_navbar_facebook_icon{
+    color: var(--color);
+    font-size: 18px;
+}
+
+
+#first_navbar5_line_1{
+    border-left: 2px solid var(--color);
+    height: 27px;
+
+}
+
+#first_navbar_instagram_icon{
+    color: var(--color);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#first_navbar_twitter_icon{
+    color: var(--color);
+    font-size: 18px;
+}
+
+
+#first_navbar_linkedin_icon{
+    color: var(--color);
+    font-size: 18px;
+}
+
+
+@media (max-width: 768px){
+    #first_navbar{
+        display: none;
+    }
+}
