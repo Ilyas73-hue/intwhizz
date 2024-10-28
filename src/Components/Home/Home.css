@@ -1293,7 +1293,11 @@ box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
     height: 45vh;
 }
 
-
+@media (max-width: 1024px){
+    #home-section-8{
+        height: 32vh;
+    }
+}
 
 @media (max-width: 995px)
 {
@@ -1362,7 +1366,26 @@ box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
 
 @media (max-width: 769px){
     #home-section-8{
-        height: 150vh;
+        height: 180vh;
+     }
+}
+
+@media(max-width: 426px){
+    #home-section-8{
+        height: 180vh;
+     }
+}
+
+
+@media(max-width: 376px){
+    #home-section-8{
+        height: 180vh;
+     }
+}
+
+@media(max-width: 321px){
+    #home-section-8{
+        height: 180vh;
      }
 }
 
