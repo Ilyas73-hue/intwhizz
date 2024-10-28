@@ -23,76 +23,76 @@ function Contact() {
 
      {/* Contact Section 2 */}
 
-      <section id="contact-section-2">
- <div className='container'>
-    <div id='contact-section-2-1'>
-      <div id="contact-section-2-1-1">
-         <p id="contact-section-2-1-1-p">Contact</p>
-      </div>
+     <section id="contact-section-2">
+<div className='container'>
+   <div id='contact-section-2-1'>
+     <div id="contact-section-2-1-1">
+        <p id="contact-section-2-1-1-p">Contact</p>
+     </div>
 
-      <div id="contact-section-2-1-2">
-         <div id="contact-section-2-1-2-1">
-            <div id="contact-section-2-1-2-1-1">
-            <FaPhoneAlt id="contact-section-2-1-2-2-phone" />
-            </div>
-            <div id="contact-section-2-1-2-1-2">
-              <p id="contact-section-2-1-2-1-2-p-1">Phone Number</p>
-              <p id="contact-section-2-1-2-1-2-p-2">+91 90437 21244</p>
-            </div>
-         </div>
-         <div id="contact-section-2-1-2-2">
-         <div id="contact-section-2-1-2-2-1">
-            <MdEmail id="contact-section-2-1-2-2-email" />
-            </div>
-            <div id="contact-section-2-1-2-2-2">
-              <p id="contact-section-2-1-2-2-2-p-1">Email</p>
-              <p id="contact-section-2-1-2-2-2-p-2">info@intwhizz.in</p>
-            </div>
-         </div>
-         <div id="contact-section-2-1-2-3">
-         <div id="contact-section-2-1-2-3-1">
-            <IoLocationSharp id="contact-section-2-1-2-3-location" />
-            </div>
-            <div id="contact-section-2-1-2-3-2">
-              <p id="contact-section-2-1-2-3-2-p-1">Address</p>
-              <p id="contact-section-2-1-2-3-2-p-2">3 A/1 1st Floor, 60 Feet Road, STC College Road, Near Indian Bank, Perumalpuram,Tirunelveli 627007</p>
-            </div>
-         </div>
-      </div>
-
-      <div id="contact-section-2-1-3">
-        <div id="contact-section-2-1-3-1">
-          <div id="contact-section-2-1-3-1-1">
-              <p id="contact-section-2-1-3-1-1-p"> Get Enquiry Now </p> 
-              <div id="contact-section-2-1-3-1-1-line">
-              </div> 
-              <div id="contact-section-2-1-3-1-2">
-                <form id="contact-section-2-1-3-1-2-form">
-                 <div id="contact-section-2-1-3-1-2-1">
-                     <input type="text" id="contact-section-2-1-3-1-2-1-input-1" placeholder='your name' />
-                     <input type="email" id="contact-section-2-1-3-1-2-1-input-2" placeholder='your email' />
-                 </div>
-                 <div id="contact-section-2-1-3-1-2-2">
-                     <input type="phone" id="contact-section-2-1-3-1-2-2-input-1" placeholder='Phone number' />
-                     <select id='contact-section-2-1-3-1-2-2-input-2' name="Course Type">
-                     <option>Selected Course</option>
-                     </select>
-                 </div>
-                 <div id="contact-section-2-1-3-1-2-3">
-                     <textarea type="phone" id="contact-section-2-1-3-1-2-3-input-1" placeholder='Address' />
-                 </div>
-                 <button id="contact-section-2-1-3-1-2-3-button">Enquiry Now</button>
-                </form>
-              </div>
-          </div>
-          <div id="contact-section-2-1-3-1-3">
-             <img id="contact-section-2-1-3-1-3-img" src={img4} alt={img4} />
-          </div>
+     <div id="contact-section-2-1-2">
+        <div id="contact-section-2-1-2-1">
+           <div id="contact-section-2-1-2-1-1">
+           <FaPhoneAlt id="contact-section-2-1-2-2-phone" />
+           </div>
+           <div id="contact-section-2-1-2-1-2">
+             <p id="contact-section-2-1-2-1-2-p-1">Phone Number</p>
+             <p id="contact-section-2-1-2-1-2-p-2">+91 90437 21244</p>
+           </div>
         </div>
-      </div>
+        <div id="contact-section-2-1-2-2">
+        <div id="contact-section-2-1-2-2-1">
+           <MdEmail id="contact-section-2-1-2-2-email" />
+           </div>
+           <div id="contact-section-2-1-2-2-2">
+             <p id="contact-section-2-1-2-2-2-p-1">Email</p>
+             <p id="contact-section-2-1-2-2-2-p-2">info@intwhizz.in</p>
+           </div>
+        </div>
+        <div id="contact-section-2-1-2-3">
+        <div id="contact-section-2-1-2-3-1">
+           <IoLocationSharp id="contact-section-2-1-2-3-location" />
+           </div>
+           <div id="contact-section-2-1-2-3-2">
+             <p id="contact-section-2-1-2-3-2-p-1">Address</p>
+             <p id="contact-section-2-1-2-3-2-p-2">3 A/1 1st Floor, 60 Feet Road, STC College Road, Near Indian Bank, Perumalpuram,Tirunelveli 627007</p>
+           </div>
+        </div>
+     </div>
 
-    </div>
- </div>
+     <div id="contact-section-2-1-3">
+       <div id="contact-section-2-1-3-1">
+         <div id="contact-section-2-1-3-1-1">
+             <p id="contact-section-2-1-3-1-1-p"> Get Enquiry Now </p> 
+             <div id="contact-section-2-1-3-1-1-line">
+             </div> 
+             <div id="contact-section-2-1-3-1-2">
+               <form id="contact-section-2-1-3-1-2-form">
+                <div id="contact-section-2-1-3-1-2-1">
+                    <input type="text" id="contact-section-2-1-3-1-2-1-input-1" placeholder='your name' />
+                    <input type="email" id="contact-section-2-1-3-1-2-1-input-2" placeholder='your email' />
+                </div>
+                <div id="contact-section-2-1-3-1-2-2">
+                    <input type="phone" id="contact-section-2-1-3-1-2-2-input-1" placeholder='Phone number' />
+                    <select id='contact-section-2-1-3-1-2-2-input-2' name="Course Type">
+                    <option>Selected Course</option>
+                    </select>
+                </div>
+                <div id="contact-section-2-1-3-1-2-3">
+                    <textarea type="phone" id="contact-section-2-1-3-1-2-3-input-1" placeholder='Address' />
+                </div>
+                <button id="contact-section-2-1-3-1-2-3-button">Enquiry Now</button>
+               </form>
+             </div>
+         </div>
+         <div id="contact-section-2-1-3-1-3">
+            <img id="contact-section-2-1-3-1-3-img" src={img4} alt={img4} />
+         </div>
+       </div>
+     </div>
+
+   </div>
+</div>
 </section>
 
 {/* contact section 3 */}
@@ -108,19 +108,19 @@ function Contact() {
 
 
  <section id="contact-section-4">
- <div className='container'>
-   <div id="contact-section-4-1">
-     <div id="contact-section-4-1-1">
-     <TfiEmail id="contact-section-4-1-email" />
-     <p id="contact-section-4-1-para">Subscribe To Newsletter</p>
-     </div>
-     <div id="contact-section-4-1-2">
-       <input type="text" id="contact-section-4-1-2-input" placeholder='Enter Email' />
-       <button id="contact-section-4-1-2-button">Submit</button>
+    <div className='container'>
+      <div id="contact-section-4-1">
+        <div id="contact-section-4-1-1">
+        <TfiEmail id="contact-section-4-1-email" />
+        <p id="contact-section-4-1-para">Subscribe To Newsletter</p>
+        </div>
+        <div id="contact-section-4-1-2">
+          <input type="text" id="contact-section-4-1-2-input" placeholder='Enter Email' />
+          <button id="contact-section-4-1-2-button">Submit</button>
+         </div>
       </div>
-   </div>
- </div>
-</section>
+    </div>
+  </section>
 
 
 

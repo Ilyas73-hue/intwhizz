@@ -5,9 +5,9 @@ import "./mainnavbar.css";
 
 function Mainnavbar() {
   return (
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg" id="navbar">
     <div class="container">
-      <a class="navbar-brand" href="/"><img id="main_navbar_logo" src="https://intwhizz.in/wp-content/uploads/2023/09/main_logo.png" alt={img} /> </a>
+      <a class="navbar-brand" href="/"><img id="main_navbar_logo" src="https://intwhizz.in/wp-content/uploads/2023/09/main_logo.png" alt="https://intwhizz.in/wp-content/uploads/2023/09/main_logo.png" /> </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -20,7 +20,7 @@ function Mainnavbar() {
             <a class="nav-link" id="nav-link" href="/about">About</a>
           </li>          
           <li class="nav-item">
-          <a class="nav-link" id="nav-link" href="/">Courses</a>
+          <a class="nav-link" id="nav-link" href="/course">Courses</a>
           </li>          
           <li class="nav-item">
             <a class="nav-link" id="nav-link" href="/blog">Blog</a>

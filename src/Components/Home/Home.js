@@ -231,13 +231,13 @@ function Home() {
                       <BsCheckCircleFill id="home-section-4-3-5-2" />
                       <p id="home-section-4-3-5-3">Expert Trainer</p>
                       </div>
-                      <div id="home-section-4-3-5-1">
-                      <BsCheckCircleFill id="home-section-4-3-5-2" />
-                      <p id="home-section-4-3-5-3">Online Learning</p>
+                      <div id="home-section-4-3-5-1-1">
+                      <BsCheckCircleFill id="home-section-4-3-5-2-1" />
+                      <p id="home-section-4-3-5-3-1">Online Learning</p>
                       </div>
-                      <div id="home-section-4-3-5-1">
-                      <BsCheckCircleFill id="home-section-4-3-5-2" />
-                      <p id="home-section-4-3-5-3">Placement Support</p>
+                      <div id="home-section-4-3-5-1-2">
+                      <BsCheckCircleFill id="home-section-4-3-5-2-2" />
+                      <p id="home-section-4-3-5-3-2">Placement Support</p>
                       </div>
                      </div>
                      <button id="home-section-4-3-6">Learn More</button>
@@ -260,30 +260,37 @@ function Home() {
 
             <div id="home-section-5-4">
 
-            <div  id="home-section-5-4-row" >
-           {
-         course.map((item) => (
-  <div class="col-lg-3 col-md-4 col-sm-4">
-    <div class="card" id="home-section-5-4-card">
-      <img src={item.image} class="card-img-top" id="home-section-5-4-img" alt={item.image} />
-      <div class="card-body" id="home-section-5-4-card-body">
-        <div id="home-section-5-4-card-body-1">
-        <h5 class="card-title" id="home-section-5-4-cart-title-text">{item.name}</h5>
-        <div id="home-section-5-4-star-div">
-        <FaStar id="home-section-5-4-star" />
-        <p id="home-section-5-4-p">{item.rating}</p>
-        </div>
-       
-        </div> 
-        <p class="card-text" id="home-section-5-4-cart-title-text1">{item.description}</p>
-        <button id="home-section-5-4-enroll-button">Enroll Now</button>
-      </div>
-    </div>
-  </div>
-))
-           }
+            <div id="home-section-5-4-row">
 
-            </div>
+{
+   course.map((item) => (
+ <div id="home-section-5-4-card">
+ <div id="home-section-5-4-1-head">
+    <img id="home-section-5-4-1-img" src={item.image} alt={item.image} />
+ </div>
+ <div id="home-section-5-4-1-content">
+     <div id="home-section-5-4-1-content-1">
+      <p id="home-section-5-4-1-content-1-p-1">{item.name}</p>
+      <div id="home-section-5-4-1-content-1-1">
+        <FaStar id="home-section-5-4-1-content-1-1-star" />
+        <p id="home-section-5-4-1-content-1-1-p-1">{item.rating}</p>
+      </div>
+     </div>
+     <div id='home-section-5-4-1-content-2'>
+     </div>
+     <div id='home-section-5-4-1-content-3'>
+       <p id="home-section-5-4-3-content-1-p-1">{item.description}</p>
+     </div>
+     <div id="home-section-5-4-1-content-4">
+       <button id="home-section-5-4-1-button-4">Enroll Now</button>
+     </div>
+ </div>
+</div>
+   ))
+}
+
+</div>
+
 <div id="home-section-5-4-course-button-div">
   <button id='home-section-5-4-button'>View All Courses</button>
 </div>

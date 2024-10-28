@@ -67,6 +67,7 @@ function Blog() {
                </div>
             </div>
 
+
             <div id="blog-section-2-3">
               <div id="blog-section-2-3-1"> 
                  <img id="blog-section-2-3-1-img" src={blog_img_3} alt={blog_img_3} />
@@ -84,84 +85,84 @@ function Blog() {
                    <p id="blog-section-2-3-2-1-p-2">Client-Centered Approach: Your success is our success. We work closely with you to understand your goals and develop strategies that align with your vision.</p>
                  </div>
               </div>
-            </div>
+            </div> 
 
          </div>
       </section>
 
          {/* Blog Section 3 */}
 
-     <section id="blog-section-3">
-     <div className='container'>
-        <div id='blog-section-3-1'>
-          <div id="blog-section-3-1-1">
-             <p id="blog-section-3-1-1-p">Contact</p>
-          </div>
-    
-          <div id="blog-section-3-1-2">
-             <div id="blog-section-3-1-2-1">
-                <div id="blog-section-3-1-2-1-1">
-                <FaPhoneAlt id="blog-section-3-1-2-2-phone" />
-                </div>
-                <div id="blog-section-3-1-2-1-2">
-                  <p id="blog-section-3-1-2-1-2-p-1">Phone Number</p>
-                  <p id="blog-section-3-1-2-1-2-p-2">+91 90437 21244</p>
-                </div>
-             </div>
-             <div id="blog-section-3-1-2-2">
-             <div id="blog-section-3-1-2-2-1">
-                <MdEmail id="blog-section-3-1-2-2-email" />
-                </div>
-                <div id="blog-section-3-1-2-2-2">
-                  <p id="blog-section-3-1-2-2-2-p-1">Email</p>
-                  <p id="blog-section-3-1-2-2-2-p-2">info@intwhizz.in</p>
-                </div>
-             </div>
-             <div id="blog-section-3-1-2-3">
-             <div id="blog-section-3-1-2-3-1">
-                <IoLocationSharp id="blog-section-3-1-2-3-location" />
-                </div>
-                <div id="blog-section-3-1-2-3-2">
-                  <p id="blog-section-3-1-2-3-2-p-1">Address</p>
-                  <p id="blog-section-3-1-2-3-2-p-2">3 A/1 1st Floor, 60 Feet Road, STC College Road, Near Indian Bank, Perumalpuram,Tirunelveli 627007</p>
-                </div>
-             </div>
-          </div>
-    
-          <div id="blog-section-3-1-3">
-            <div id="blog-section-3-1-3-1">
-              <div id="blog-section-3-1-3-1-1">
-                  <p id="blog-section-3-1-3-1-1-p"> Get Enquiry Now </p> 
-                  <div id="blog-section-3-1-3-1-1-line">
-                  </div> 
-                  <div id="blog-section-3-1-3-1-2">
-                    <form id="blog-section-3-1-3-1-2-form">
-                     <div id="blog-section-3-1-3-1-2-1">
-                         <input type="text" id="blog-section-3-1-3-1-2-1-input-1" placeholder='your name' />
-                         <input type="email" id="blog-section-3-1-3-1-2-1-input-2" placeholder='your email' />
-                     </div>
-                     <div id="blog-section-3-1-3-1-2-2">
-                         <input type="phone" id="blog-section-3-1-3-1-2-2-input-1" placeholder='Phone number' />
-                         <select id='blog-section-3-1-3-1-2-2-input-2' name="Course Type">
-                         <option>Selected Course</option>
-                         </select>
-                     </div>
-                     <div id="blog-section-3-1-3-1-2-3">
-                         <textarea type="phone" id="blog-section-3-1-3-1-2-3-input-1" placeholder='Address' />
-                     </div>
-                     <button id="blog-section-3-1-3-1-2-3-button">Enquiry Now</button>
-                    </form>
-                  </div>
-              </div>
-              <div id="blog-section-3-1-3-1-3">
-                 <img id="blog-section-3-1-3-1-3-img" src={img4} alt={img4} />
-              </div>
-            </div>
-          </div>
-    
+         <section id="blog-section-3">
+<div className='container'>
+   <div id='blog-section-3-1'>
+     <div id="blog-section-3-1-1">
+        <p id="blog-section-3-1-1-p">Contact</p>
+     </div>
+
+     <div id="blog-section-3-1-2">
+        <div id="blog-section-3-1-2-1">
+           <div id="blog-section-3-1-2-1-1">
+           <FaPhoneAlt id="blog-section-3-1-2-2-phone" />
+           </div>
+           <div id="blog-section-3-1-2-1-2">
+             <p id="blog-section-3-1-2-1-2-p-1">Phone Number</p>
+             <p id="blog-section-3-1-2-1-2-p-2">+91 90437 21244</p>
+           </div>
+        </div>
+        <div id="blog-section-3-1-2-2">
+        <div id="blog-section-3-1-2-2-1">
+           <MdEmail id="blog-section-3-1-2-2-email" />
+           </div>
+           <div id="blog-section-3-1-2-2-2">
+             <p id="blog-section-3-1-2-2-2-p-1">Email</p>
+             <p id="blog-section-3-1-2-2-2-p-2">info@intwhizz.in</p>
+           </div>
+        </div>
+        <div id="blog-section-3-1-2-3">
+        <div id="blog-section-3-1-2-3-1">
+           <IoLocationSharp id="blog-section-3-1-2-3-location" />
+           </div>
+           <div id="blog-section-3-1-2-3-2">
+             <p id="blog-section-3-1-2-3-2-p-1">Address</p>
+             <p id="blog-section-3-1-2-3-2-p-2">3 A/1 1st Floor, 60 Feet Road, STC College Road, Near Indian Bank, Perumalpuram,Tirunelveli 627007</p>
+           </div>
         </div>
      </div>
-    </section>
+
+     <div id="blog-section-3-1-3">
+       <div id="blog-section-3-1-3-1">
+         <div id="blog-section-3-1-3-1-1">
+             <p id="blog-section-3-1-3-1-1-p"> Get Enquiry Now </p> 
+             <div id="blog-section-3-1-3-1-1-line">
+             </div> 
+             <div id="blog-section-3-1-3-1-2">
+               <form id="blog-section-3-1-3-1-2-form">
+                <div id="blog-section-3-1-3-1-2-1">
+                    <input type="text" id="blog-section-3-1-3-1-2-1-input-1" placeholder='your name' />
+                    <input type="email" id="blog-section-3-1-3-1-2-1-input-2" placeholder='your email' />
+                </div>
+                <div id="blog-section-3-1-3-1-2-2">
+                    <input type="phone" id="blog-section-3-1-3-1-2-2-input-1" placeholder='Phone number' />
+                    <select id='blog-section-3-1-3-1-2-2-input-2' name="Course Type">
+                    <option>Selected Course</option>
+                    </select>
+                </div>
+                <div id="blog-section-3-1-3-1-2-3">
+                    <textarea type="phone" id="blog-section-3-1-3-1-2-3-input-1" placeholder='Address' />
+                </div>
+                <button id="blog-section-3-1-3-1-2-3-button">Enquiry Now</button>
+               </form>
+             </div>
+         </div>
+         <div id="blog-section-3-1-3-1-3">
+            <img id="blog-section-3-1-3-1-3-img" src={img4} alt={img4} />
+         </div>
+       </div>
+     </div>
+
+   </div>
+</div>
+</section>
 
 {/* Blog Section 4 */}
 

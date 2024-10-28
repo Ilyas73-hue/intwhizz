@@ -126,36 +126,36 @@ function About() {
        {/* About Section 3 */}
 
        <section id="about-section-3">
-          <div className="container">
-            <div id="about-section-3-1">
-                <div id="about-section-3-2">
-                   <img id="about-section-3-2-img" src={img10} alt={img10} />
-                </div>
+<div className="container">
+  <div id="about-section-3-1">
+      <div id="about-section-3-2">
+         <img id="about-section-3-2-img" src={img10} alt={img10} />
+      </div>
 
-                <div id="about-section-3-3">
-                    <p id="about-section-3-3-1">About Us</p>
-                    <div id="about-section-3-3-2"></div>
-                    <h6 id="about-section-3-3-3">Intwhizz Training Institute</h6>
-                    <p id="about-section-3-3-4">At IntWhizz, we’re digital and software wizards! Founded in 2021, we’re here to boost your online presence and craft solutions that go beyond the ordinary. Our team of experts has years of experience in the digital marketing and software industry and is passionate about delivering results that exceed our client’s expectations.</p>
-                     <div id="about-section-3-3-5"> 
-                      <div id="about-section-3-3-5-1">
-                      <BsCheckCircleFill id="about-section-3-3-5-2" />
-                      <p id="about-section-3-3-5-3">Expert Trainer</p>
-                      </div>
-                      <div id="about-section-3-3-5-1">
-                      <BsCheckCircleFill id="about-section-3-3-5-2" />
-                      <p id="about-section-3-3-5-3">Online Learning</p>
-                      </div>
-                      <div id="about-section-3-3-5-1">
-                      <BsCheckCircleFill id="about-section-3-3-5-2" />
-                      <p id="about-section-3-3-5-3">Placement Support</p>
-                      </div>
-                     </div>
-                     <button id="about-section-3-3-6">Learn More</button>
-                </div>
+      <div id="about-section-3-3">
+          <p id="about-section-3-3-1">About Us</p>
+          <div id="about-section-3-3-2"></div>
+          <h6 id="about-section-3-3-3">Intwhizz Training Institute</h6>
+          <p id="about-section-3-3-4">At IntWhizz, we’re digital and software wizards! Founded in 2021, we’re here to boost your online presence and craft solutions that go beyond the ordinary. Our team of experts has years of experience in the digital marketing and software industry and is passionate about delivering results that exceed our client’s expectations.</p>
+           <div id="about-section-3-3-5"> 
+            <div id="about-section-3-3-5-1">
+            <BsCheckCircleFill id="about-section-3-3-5-2" />
+            <p id="about-section-3-3-5-3">Expert Trainer</p>
             </div>
-          </div>
-       </section>
+            <div id="about-section-3-3-5-1-1">
+            <BsCheckCircleFill id="about-section-3-3-5-2-1" />
+            <p id="about-section-3-3-5-3-1">Online Learning</p>
+            </div>
+            <div id="about-section-3-3-5-1-2">
+            <BsCheckCircleFill id="about-section-3-3-5-2-2" />
+            <p id="about-section-3-3-5-3-2">Placement Support</p>
+            </div>
+           </div>
+           <button id="about-section-3-3-6">Learn More</button>
+      </div>
+  </div>
+</div>
+</section>
 
        {/* About Section 4 */}
 
