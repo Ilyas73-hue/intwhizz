@@ -1143,18 +1143,18 @@ box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
 
 /* home section 7 */
 
-#home-section-7{
+
+#home-section-7-1-1{
     background-image: url("../../assets/home7.jpeg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     padding-top: 50px;
     padding-bottom: 50px;
-    height: 40vh;
+    height: 35vh;
 }
 
-
-#home-section-7-1-1{
+#home-section-7-1-1-1{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1174,10 +1174,13 @@ box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
     font-weight: 400;
 }
 
+#home-section-7-1-2{
+    margin-top: -130px;
+    padding-bottom: 50px;
+}
+
 #home-section-7-1-2-1{
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around; */
+  
 
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1266,6 +1269,13 @@ box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
     }
 }
 
+@media(max-width: 769px){
+    #home-section-7-1-2{
+      margin-top: -90px;
+      padding-bottom: 0px;
+    }
+  }
+
 @media(max-width: 768px){
     #home-section-7-1-2-1{
         grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -1287,111 +1297,11 @@ box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
     } 
  }
 
+
+
 /* home section 8 */
 
 #home-section-8{
-    height: 45vh;
-}
-
-@media (max-width: 1024px){
-    #home-section-8{
-        height: 32vh;
-    }
-}
-
-@media (max-width: 995px)
-{
-    #home-section-8{
-       height: 60vh;
-    }
-     
-}
-
-
-@media (max-width: 993px)
-{
-    #home-section-8{
-       height: 80vh;
-    }
-     
-}
-
-@media (max-width: 991px)
-{
-    #home-section-8{
-       height: 110vh;
-    }
-     
-}
-@media (max-width: 988px)
-{
-    #home-section-8{
-       height: 80vh;
-    }
-     
-}
-
-@media (max-width: 986px)
-{
-    #home-section-8{
-       height: 110vh;
-    }
-     
-}
-
-@media (max-width: 972px)
-{
-    #home-section-8{
-       height: 80vh;
-    }
-     
-}
-
-@media (max-width: 971px)
-{
-    #home-section-8{
-       height: 110vh;
-    }
-     
-}
-
-
-@media (max-width: 968px)
-{
-    #home-section-8{
-       height: 120vh;
-    }
-     
-}
-
-@media (max-width: 769px){
-    #home-section-8{
-        height: 180vh;
-     }
-}
-
-@media(max-width: 426px){
-    #home-section-8{
-        height: 180vh;
-     }
-}
-
-
-@media(max-width: 376px){
-    #home-section-8{
-        height: 145vh;
-    }
-}
-
-@media(max-width: 321px){
-    #home-section-8{
-        height: 180vh;
-     }
-}
-
-/* home section 9 */
-
-#home-section-9{
     background-image: url("../../assets/home8.png");
     background-repeat: no-repeat;
     background-position: center;
@@ -1400,33 +1310,33 @@ box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
     padding-bottom: 20px;
 }
 
-#home-section-9-1{
+#home-section-8-1{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
 }
 
-#home-section-9-1-1{
+#home-section-8-1-1{
     display: flex;
     flex-direction: row;
     gap: 20px;
     margin-top: 10px;
 }
 
-#home-section-9-1-email{
+#home-section-8-1-email{
     font-size: 40px;
     color: var(--color);
 }
 
-#home-section-9-1-para{
+#home-section-8-1-para{
    color: var(--color);
    font-family: var(--font);
    font-size: 26px;
    font-weight: 600;
 }
 
-#home-section-9-1-2-input{
+#home-section-8-1-2-input{
     width: 350px;
     font-size: 15px;
     font-family: var(--font);
@@ -1435,7 +1345,7 @@ box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
     color: var(--primary-color);
 }
 
-#home-section-9-1-2-button{
+#home-section-8-1-2-button{
     border: none;
     background-color: var(--primary-color);
     color: var(--color);
@@ -1450,220 +1360,32 @@ box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
 
 
 @media (max-width: 993px){
-    #home-section-9-1{
+    #home-section-8-1{
         flex-direction: column;
     }
 }
 
 @media (max-width: 474px){
-    #home-section-9-1-2-input{
+    #home-section-8-1-2-input{
         width: 300px;
     }
 }
 
 
 @media (max-width: 415px){
-    #home-section-9-1-2-input{
+    #home-section-8-1-2-input{
         width: 200px;
     }
 
-    #home-section-9-1-email{
+    #home-section-8-1-email{
         font-size: 25px;
         color: var(--color);
         margin-top: 2px;
     }
 
-    #home-section-9-1-para{
+    #home-section-8-1-para{
         font-size: 20px;
     }
 
 }
 
-/* course-section-9 */
-
-
-#course-section-9{
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-  
-  #course-section-9-1{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-  }
-  
-  #course-section-9-1-head-content{
-      color: var(--primary-color);
-      font-size: 15px;
-      font-family: var(--font);
-      font-weight: 500;
-  }
-  
-  
-  #course-section-9-1-line{
-      width: 40px;
-      height: 2px;
-      background-color: var(--primary-color);
-      margin-top: -10px;
-  }
-  
-  #course-section-9-2{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-top: 50px;
-  }
-  
-  
-  #course-section-9-2-head-content{
-      color: var(--primary-color);
-      font-size: 20px;
-      font-weight: 600;
-      font-family: var(--font);
-  }
-  
-  #course-section-9-2-para-content{
-        color: var(--color1);
-        font-family: var(--font);
-        font-size: 16px;
-        width: 600px;
-        text-align: center;
-        font-weight: 400;
-        line-height: 30px;
-  }
-  
-  
-  
-  #course-section-9-3-1{
-      padding-top: 40px;
-      padding-bottom: 40px;
-      /* display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between; */
-  
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      justify-items: center;
-  }
-  
-  
-  
-  #course-section-9-3-2{
-      padding: 20px;
-     background-color: var(--color);
-     width: 350px;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-items: center;
-     -webkit-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
-  -moz-box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
-  box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.75);
-  }
-  
-  #course-section-9-3-2-1{
-      background-color: var(--primary-color);
-      height: 70px;
-      width: 70px;
-      border-radius: 50%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-  }
-  
-  #course-section-9-3-2-2{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-  }
-  
-  
-  #course-section-9-3-2-2-p-1{
-      color: var(--color1);
-      font-size: 18px;
-      font-family: var(--font);
-      font-weight: 500;
-      text-align: center;
-      margin-top: 20px;
-  }
-  
-  
-  
-  #course-section-9-3-2-2-p-2{
-      color: var(--color1);
-      font-size: 15px;
-      font-family: var(--font);
-      font-weight: 500;
-     text-align: center;
-  }
-  
-  
-  #course-section-9-3-2-1-group-icon{
-      color: var(--color);
-      font-size: 27px;
-  }
-  
-  @media (max-width: 1024px){
-      #course-section-9-3-1{
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-          justify-items: center;
-          gap: 20px;
-      }
-      
-  }
-  
-  @media (max-width: 786px){
-      #course-section-9-3-1{
-          grid-template-columns: repeat(1, minmax(0, 1fr));
-          justify-items: center;
-          gap: 20px;
-      }
-      
-  }
-  
-  @media (max-width: 602px){
-      #course-section-9-2-para-content{
-          color: var(--color1);
-          font-family: var(--font);
-          font-size: 16px;
-          width: 500px;
-          text-align: center;
-          font-weight: 400;
-          line-height: 30px;
-    }
-  }
-  
-  @media (max-width: 520px){
-      #course-section-9-2-para-content{
-          color: var(--color1);
-          font-family: var(--font);
-          font-size: 16px;
-          width: 400px;
-          text-align: center;
-          font-weight: 400;
-          line-height: 30px;
-    }
-  }
-  
-  
-  @media (max-width: 415px){
-      #course-section-9-2-para-content{
-          color: var(--color1);
-          font-family: var(--font);
-          font-size: 16px;
-          width: 300px;
-          text-align: center;
-          font-weight: 400;
-          line-height: 30px;
-    }
-  }
-  
-  @media (max-width: 376px){
-      #course-section-9-3-2{
-          width: 100%;
-      }
-  }

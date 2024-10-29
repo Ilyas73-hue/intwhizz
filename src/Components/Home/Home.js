@@ -350,77 +350,77 @@ function Home() {
 
        {/* Section 7 */}
 
-       <section id="home-section-7">
-        <div className='container' id="home-section-7-1">
-          <div id="home-section-7-1-1">
-            <p id='home-section-7-1-1-p-1'>Testimonials</p>
-            <p id="home-section-7-1-1-p-2">What a wonderful experience with Intwhizz</p>
-          </div>
-          <div id='home-section-7-1-2'>
-           <div id="home-section-7-1-2-1">
-
-            <div id="home-section-7-1-2-2">
-               <div id="home-section-7-1-2-3">
-                <img id="home-section-7-1-2-3-img" src={test1} alt={test1} />
-               </div>
-               <div id="home-section-7-1-2-4">
-                 <p id="home-section-7-1-2-4-p">Sara</p>
-                 <p id="home-section-7-1-2-5-p">Graphic Design Course</p>
-                 <p id="home-section-7-1-2-6-p"><FaQuoteLeft id="home-section-7-1-2-6-quote" />  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat officia aliquid iusto illo laboriosam, sit, nostrum id quaerat pariatur repellendus quis ullam hic in, non harum inventore cumque laudantium . <FaQuoteRight id="home-section-7-1-2-6-quote" /></p>
-                 <p id="home-section-7-1-2-7-star-flex"> <FaStar id="home-section-7-1-2-7-star-fill" />   <FaStar id="home-section-7-1-2-7-star-fill" />   <FaStar id="home-section-7-1-2-7-star-fill" />   <FaStar id="home-section-7-1-2-7-star-fill" />  <FaStar id="home-section-7-1-2-7-star-unfill" />
-                  </p>
+        <section id="home-section-7">
+        <div id="home-section-7-1">
+            <div id="home-section-7-1-1">
+                <div className='container' id="home-section-7-1-1-1">
+                <p id='home-section-7-1-1-p-1'>Testimonials</p>
+                <p id="home-section-7-1-1-p-2">What a wonderful experience with Intwhizz</p>
                 </div>
             </div>
+            <div id="home-section-7-1-2">
+              <div className='container'>
+              <div id="home-section-7-1-2-1">
 
-            <div id="home-section-7-1-2-2">
-               <div id="home-section-7-1-2-3">
-                <img id="home-section-7-1-2-3-img" src={test1} alt={test1} />
-               </div>
-               <div id="home-section-7-1-2-4">
-                 <p id="home-section-7-1-2-4-p">Sara</p>
-                 <p id="home-section-7-1-2-5-p">Graphic Design Course</p>
-                 <p id="home-section-7-1-2-6-p"><FaQuoteLeft id="home-section-7-1-2-6-quote" />  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat officia aliquid iusto illo laboriosam, sit, nostrum id quaerat pariatur repellendus quis ullam hic in, non harum inventore cumque laudantium . <FaQuoteRight id="home-section-7-1-2-6-quote" /></p>
-                 <p id="home-section-7-1-2-7-star-flex"> <FaStar id="home-section-7-1-2-7-star-fill" />   <FaStar id="home-section-7-1-2-7-star-fill" />   <FaStar id="home-section-7-1-2-7-star-fill" />   <FaStar id="home-section-7-1-2-7-star-fill" />  <FaStar id="home-section-7-1-2-7-star-unfill" />
-                  </p>
-                </div>
+<div id="home-section-7-1-2-2">
+   <div id="home-section-7-1-2-3">
+    <img id="home-section-7-1-2-3-img" src={test1} alt={test1} />
+   </div>
+   <div id="home-section-7-1-2-4">
+     <p id="home-section-7-1-2-4-p">Sara</p>
+     <p id="home-section-7-1-2-5-p">Graphic Design Course</p>
+     <p id="home-section-7-1-2-6-p"><FaQuoteLeft id="home-section-7-1-2-6-quote" />  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat officia aliquid iusto illo laboriosam, sit, nostrum id quaerat pariatur repellendus quis ullam hic in, non harum inventore cumque laudantium . <FaQuoteRight id="home-section-7-1-2-6-quote" /></p>
+     <p id="home-section-7-1-2-7-star-flex"> <FaStar id="home-section-7-1-2-7-star-fill" />   <FaStar id="home-section-7-1-2-7-star-fill" />   <FaStar id="home-section-7-1-2-7-star-fill" />   <FaStar id="home-section-7-1-2-7-star-fill" />  <FaStar id="home-section-7-1-2-7-star-unfill" />
+      </p>
+    </div>
+</div>
+
+<div id="home-section-7-1-2-2">
+   <div id="home-section-7-1-2-3">
+    <img id="home-section-7-1-2-3-img" src={test1} alt={test1} />
+   </div>
+   <div id="home-section-7-1-2-4">
+     <p id="home-section-7-1-2-4-p">Sara</p>
+     <p id="home-section-7-1-2-5-p">Graphic Design Course</p>
+     <p id="home-section-7-1-2-6-p"><FaQuoteLeft id="home-section-7-1-2-6-quote" />  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat officia aliquid iusto illo laboriosam, sit, nostrum id quaerat pariatur repellendus quis ullam hic in, non harum inventore cumque laudantium . <FaQuoteRight id="home-section-7-1-2-6-quote" /></p>
+     <p id="home-section-7-1-2-7-star-flex"> <FaStar id="home-section-7-1-2-7-star-fill" />   <FaStar id="home-section-7-1-2-7-star-fill" />   <FaStar id="home-section-7-1-2-7-star-fill" />   <FaStar id="home-section-7-1-2-7-star-fill" />  <FaStar id="home-section-7-1-2-7-star-unfill" />
+      </p>
+    </div>
+</div>
+
+<div id="home-section-7-1-2-2">
+   <div id="home-section-7-1-2-3">
+    <img id="home-section-7-1-2-3-img" src={test1} alt={test1} />
+   </div>
+   <div id="home-section-7-1-2-4">
+     <p id="home-section-7-1-2-4-p">Sara</p>
+     <p id="home-section-7-1-2-5-p">Graphic Design Course</p>
+     <p id="home-section-7-1-2-6-p"><FaQuoteLeft id="home-section-7-1-2-6-quote" />  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat officia aliquid iusto illo laboriosam, sit, nostrum id quaerat pariatur repellendus quis ullam hic in, non harum inventore cumque laudantium . <FaQuoteRight id="home-section-7-1-2-6-quote" /></p>
+     <p id="home-section-7-1-2-7-star-flex"> <FaStar id="home-section-7-1-2-7-star-fill" />   <FaStar id="home-section-7-1-2-7-star-fill" />   <FaStar id="home-section-7-1-2-7-star-fill" />   <FaStar id="home-section-7-1-2-7-star-fill" />  <FaStar id="home-section-7-1-2-7-star-unfill" />
+      </p>
+    </div>
+</div>
+
+</div>
+              </div>
             </div>
-
-            <div id="home-section-7-1-2-2">
-               <div id="home-section-7-1-2-3">
-                <img id="home-section-7-1-2-3-img" src={test1} alt={test1} />
-               </div>
-               <div id="home-section-7-1-2-4">
-                 <p id="home-section-7-1-2-4-p">Sara</p>
-                 <p id="home-section-7-1-2-5-p">Graphic Design Course</p>
-                 <p id="home-section-7-1-2-6-p"><FaQuoteLeft id="home-section-7-1-2-6-quote" />  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat officia aliquid iusto illo laboriosam, sit, nostrum id quaerat pariatur repellendus quis ullam hic in, non harum inventore cumque laudantium . <FaQuoteRight id="home-section-7-1-2-6-quote" /></p>
-                 <p id="home-section-7-1-2-7-star-flex"> <FaStar id="home-section-7-1-2-7-star-fill" />   <FaStar id="home-section-7-1-2-7-star-fill" />   <FaStar id="home-section-7-1-2-7-star-fill" />   <FaStar id="home-section-7-1-2-7-star-fill" />  <FaStar id="home-section-7-1-2-7-star-unfill" />
-                  </p>
-                </div>
-            </div>
-
-           </div>
-          </div>
         </div>
-       </section>
+        </section>
+      
+ 
 
        {/* Section 8 */}
 
        <section id="home-section-8">
-
-       </section>
-
-       {/* Section 9 */}
-
-       <section id="home-section-9">
          <div className='container'>
-           <div id="home-section-9-1">
-             <div id="home-section-9-1-1">
-             <TfiEmail id="home-section-9-1-email" />
-             <p id="home-section-9-1-para">Subscribe To Newsletter</p>
+           <div id="home-section-8-1">
+             <div id="home-section-8-1-1">
+             <TfiEmail id="home-section-8-1-email" />
+             <p id="home-section-8-1-para">Subscribe To Newsletter</p>
              </div>
-             <div id="home-section-9-1-2">
-               <input type="text" id="home-section-9-1-2-input" placeholder='Enter Email' />
-               <button id="home-section-9-1-2-button">Submit</button>
+             <div id="home-section-8-1-2">
+               <input type="text" id="home-section-8-1-2-input" placeholder='Enter Email' />
+               <button id="home-section-8-1-2-button">Submit</button>
               </div>
            </div>
          </div>

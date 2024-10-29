@@ -861,132 +861,131 @@ const productive_collaboration = [{
        {/* course-section-10 */}
 
        <section id="course-section-10">
-<div className='container' id="course-section-10-1">
-  <div id="course-section-10-1-1">
-    <p id='course-section-10-1-1-p-1'>Testimonials</p>
-    <p id="course-section-10-1-1-p-2">What a wonderful experience with Intwhizz</p>
-  </div>
-  <div id='course-section-10-1-2'>
-   <div id="course-section-10-1-2-1">
+        <div id="course-section-10-1">
+            <div id="course-section-10-1-1">
+                <div className='container' id="course-section-10-1-1-1">
+                <p id='course-section-10-1-1-p-1'>Testimonials</p>
+                <p id="course-section-10-1-1-p-2">What a wonderful experience with Intwhizz</p>
+                </div>
+            </div>
+            <div id="course-section-10-1-2">
+              <div className='container'>
+              <div id="course-section-10-1-2-1">
 
-    <div id="course-section-10-1-2-2">
-       <div id="course-section-10-1-2-3">
-        <img id="course-section-10-1-2-3-img" src={test1} alt={test1} />
-       </div>
-       <div id="course-section-10-1-2-4">
-         <p id="course-section-10-1-2-4-p">Sara</p>
-         <p id="course-section-10-1-2-5-p">Graphic Design Course</p>
-         <p id="course-section-10-1-2-6-p"><FaQuoteLeft id="course-section-10-1-2-6-quote" />  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat officia aliquid iusto illo laboriosam, sit, nostrum id quaerat pariatur repellendus quis ullam hic in, non harum inventore cumque laudantium . <FaQuoteRight id="course-section-10-1-2-6-quote" /></p>
-         <p id="course-section-10-1-2-7-star-flex"> <FaStar id="course-section-10-1-2-7-star-fill" />   <FaStar id="course-section-10-1-2-7-star-fill" />   <FaStar id="course-section-10-1-2-7-star-fill" />   <FaStar id="course-section-10-1-2-7-star-fill" />  <FaStar id="course-section-10-1-2-7-star-unfill" />
-          </p>
-        </div>
-    </div>
-
-    <div id="course-section-10-1-2-2">
-       <div id="course-section-10-1-2-3">
-        <img id="course-section-10-1-2-3-img" src={test1} alt={test1} />
-       </div>
-       <div id="course-section-10-1-2-4">
-         <p id="course-section-10-1-2-4-p">Sara</p>
-         <p id="course-section-10-1-2-5-p">Graphic Design Course</p>
-         <p id="course-section-10-1-2-6-p"><FaQuoteLeft id="course-section-10-1-2-6-quote" />  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat officia aliquid iusto illo laboriosam, sit, nostrum id quaerat pariatur repellendus quis ullam hic in, non harum inventore cumque laudantium . <FaQuoteRight id="course-section-10-1-2-6-quote" /></p>
-         <p id="course-section-10-1-2-7-star-flex"> <FaStar id="course-section-10-1-2-7-star-fill" />   <FaStar id="course-section-10-1-2-7-star-fill" />   <FaStar id="course-section-10-1-2-7-star-fill" />   <FaStar id="course-section-10-1-2-7-star-fill" />  <FaStar id="course-section-10-1-2-7-star-unfill" />
-          </p>
-        </div>
-    </div>
-
-    <div id="course-section-10-1-2-2">
-       <div id="course-section-10-1-2-3">
-        <img id="course-section-10-1-2-3-img" src={test1} alt={test1} />
-       </div>
-       <div id="course-section-10-1-2-4">
-         <p id="course-section-10-1-2-4-p">Sara</p>
-         <p id="course-section-10-1-2-5-p">Graphic Design Course</p>
-         <p id="course-section-10-1-2-6-p"><FaQuoteLeft id="course-section-10-1-2-6-quote" />  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat officia aliquid iusto illo laboriosam, sit, nostrum id quaerat pariatur repellendus quis ullam hic in, non harum inventore cumque laudantium . <FaQuoteRight id="course-section-10-1-2-6-quote" /></p>
-         <p id="course-section-10-1-2-7-star-flex"> <FaStar id="course-section-10-1-2-7-star-fill" />   <FaStar id="course-section-10-1-2-7-star-fill" />   <FaStar id="course-section-10-1-2-7-star-fill" />   <FaStar id="course-section-10-1-2-7-star-fill" />  <FaStar id="course-section-10-1-2-7-star-unfill" />
-          </p>
-        </div>
-    </div>
-
+<div id="course-section-10-1-2-2">
+   <div id="course-section-10-1-2-3">
+    <img id="course-section-10-1-2-3-img" src={test1} alt={test1} />
    </div>
-  </div>
+   <div id="course-section-10-1-2-4">
+     <p id="course-section-10-1-2-4-p">Sara</p>
+     <p id="course-section-10-1-2-5-p">Graphic Design Course</p>
+     <p id="course-section-10-1-2-6-p"><FaQuoteLeft id="course-section-10-1-2-6-quote" />  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat officia aliquid iusto illo laboriosam, sit, nostrum id quaerat pariatur repellendus quis ullam hic in, non harum inventore cumque laudantium . <FaQuoteRight id="course-section-10-1-2-6-quote" /></p>
+     <p id="course-section-10-1-2-7-star-flex"> <FaStar id="course-section-10-1-2-7-star-fill" />   <FaStar id="course-section-10-1-2-7-star-fill" />   <FaStar id="course-section-10-1-2-7-star-fill" />   <FaStar id="course-section-10-1-2-7-star-fill" />  <FaStar id="course-section-10-1-2-7-star-unfill" />
+      </p>
+    </div>
 </div>
-</section>
+
+<div id="course-section-10-1-2-2">
+   <div id="course-section-10-1-2-3">
+    <img id="course-section-10-1-2-3-img" src={test1} alt={test1} />
+   </div>
+   <div id="course-section-10-1-2-4">
+     <p id="course-section-10-1-2-4-p">Sara</p>
+     <p id="course-section-10-1-2-5-p">Graphic Design Course</p>
+     <p id="course-section-10-1-2-6-p"><FaQuoteLeft id="course-section-10-1-2-6-quote" />  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat officia aliquid iusto illo laboriosam, sit, nostrum id quaerat pariatur repellendus quis ullam hic in, non harum inventore cumque laudantium . <FaQuoteRight id="course-section-10-1-2-6-quote" /></p>
+     <p id="course-section-10-1-2-7-star-flex"> <FaStar id="course-section-10-1-2-7-star-fill" />   <FaStar id="course-section-10-1-2-7-star-fill" />   <FaStar id="course-section-10-1-2-7-star-fill" />   <FaStar id="course-section-10-1-2-7-star-fill" />  <FaStar id="course-section-10-1-2-7-star-unfill" />
+      </p>
+    </div>
+</div>
+
+<div id="course-section-10-1-2-2">
+   <div id="course-section-10-1-2-3">
+    <img id="course-section-10-1-2-3-img" src={test1} alt={test1} />
+   </div>
+   <div id="course-section-10-1-2-4">
+     <p id="course-section-10-1-2-4-p">Sara</p>
+     <p id="course-section-10-1-2-5-p">Graphic Design Course</p>
+     <p id="course-section-10-1-2-6-p"><FaQuoteLeft id="course-section-10-1-2-6-quote" />  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat officia aliquid iusto illo laboriosam, sit, nostrum id quaerat pariatur repellendus quis ullam hic in, non harum inventore cumque laudantium . <FaQuoteRight id="course-section-10-1-2-6-quote" /></p>
+     <p id="course-section-10-1-2-7-star-flex"> <FaStar id="course-section-10-1-2-7-star-fill" />   <FaStar id="course-section-10-1-2-7-star-fill" />   <FaStar id="course-section-10-1-2-7-star-fill" />   <FaStar id="course-section-10-1-2-7-star-fill" />  <FaStar id="course-section-10-1-2-7-star-unfill" />
+      </p>
+    </div>
+</div>
+
+</div>
+              </div>
+            </div>
+        </div>
+        </section>
+      
+ 
+
 
 {/* course-section-11 */}
 
-
 <section id="course-section-11">
-
-</section>
-
-
-{/* course-section-12 */}
-
-<section id="course-section-12">
 <div className='container'>
-   <div id='course-section-12-1'>
-     <div id="course-section-12-1-1">
-        <p id="course-section-12-1-1-p">Contact</p>
+   <div id='course-section-11-1'>
+     <div id="course-section-11-1-1">
+        <p id="course-section-11-1-1-p">Contact</p>
      </div>
 
-     <div id="course-section-12-1-2">
-        <div id="course-section-12-1-2-1">
-           <div id="course-section-12-1-2-1-1">
-           <FaPhoneAlt id="course-section-12-1-2-2-phone" />
+     <div id="course-section-11-1-2">
+        <div id="course-section-11-1-2-1">
+           <div id="course-section-11-1-2-1-1">
+           <FaPhoneAlt id="course-section-11-1-2-2-phone" />
            </div>
-           <div id="course-section-12-1-2-1-2">
-             <p id="course-section-12-1-2-1-2-p-1">Phone Number</p>
-             <p id="course-section-12-1-2-1-2-p-2">+91 90437 21244</p>
-           </div>
-        </div>
-        <div id="course-section-12-1-2-2">
-        <div id="course-section-12-1-2-2-1">
-           <MdEmail id="course-section-12-1-2-2-email" />
-           </div>
-           <div id="course-section-12-1-2-2-2">
-             <p id="course-section-12-1-2-2-2-p-1">Email</p>
-             <p id="course-section-12-1-2-2-2-p-2">info@intwhizz.in</p>
+           <div id="course-section-11-1-2-1-2">
+             <p id="course-section-11-1-2-1-2-p-1">Phone Number</p>
+             <p id="course-section-11-1-2-1-2-p-2">+91 90437 21244</p>
            </div>
         </div>
-        <div id="course-section-12-1-2-3">
-        <div id="course-section-12-1-2-3-1">
-           <IoLocationSharp id="course-section-12-1-2-3-location" />
+        <div id="course-section-11-1-2-2">
+        <div id="course-section-11-1-2-2-1">
+           <MdEmail id="course-section-11-1-2-2-email" />
            </div>
-           <div id="course-section-12-1-2-3-2">
-             <p id="course-section-12-1-2-3-2-p-1">Address</p>
-             <p id="course-section-12-1-2-3-2-p-2">3 A/1 1st Floor, 60 Feet Road, STC College Road, Near Indian Bank, Perumalpuram,Tirunelveli 627007</p>
+           <div id="course-section-11-1-2-2-2">
+             <p id="course-section-11-1-2-2-2-p-1">Email</p>
+             <p id="course-section-11-1-2-2-2-p-2">info@intwhizz.in</p>
+           </div>
+        </div>
+        <div id="course-section-11-1-2-3">
+        <div id="course-section-11-1-2-3-1">
+           <IoLocationSharp id="course-section-11-1-2-3-location" />
+           </div>
+           <div id="course-section-11-1-2-3-2">
+             <p id="course-section-11-1-2-3-2-p-1">Address</p>
+             <p id="course-section-11-1-2-3-2-p-2">3 A/1 1st Floor, 60 Feet Road, STC College Road, Near Indian Bank, Perumalpuram,Tirunelveli 627007</p>
            </div>
         </div>
      </div>
 
-     <div id="course-section-12-1-3">
-       <div id="course-section-12-1-3-1">
-         <div id="course-section-12-1-3-1-1">
-             <p id="course-section-12-1-3-1-1-p"> Get Enquiry Now </p> 
-             <div id="course-section-12-1-3-1-1-line">
+     <div id="course-section-11-1-3">
+       <div id="course-section-11-1-3-1">
+         <div id="course-section-11-1-3-1-1">
+             <p id="course-section-11-1-3-1-1-p"> Get Enquiry Now </p> 
+             <div id="course-section-11-1-3-1-1-line">
              </div> 
-             <div id="course-section-12-1-3-1-2">
-               <form id="course-section-12-1-3-1-2-form">
-                <div id="course-section-12-1-3-1-2-1">
-                    <input type="text" id="course-section-12-1-3-1-2-1-input-1" placeholder='your name' />
-                    <input type="email" id="course-section-12-1-3-1-2-1-input-2" placeholder='your email' />
+             <div id="course-section-11-1-3-1-2">
+               <form id="course-section-11-1-3-1-2-form">
+                <div id="course-section-11-1-3-1-2-1">
+                    <input type="text" id="course-section-11-1-3-1-2-1-input-1" placeholder='your name' />
+                    <input type="email" id="course-section-11-1-3-1-2-1-input-2" placeholder='your email' />
                 </div>
-                <div id="course-section-12-1-3-1-2-2">
-                    <input type="phone" id="course-section-12-1-3-1-2-2-input-1" placeholder='Phone number' />
-                    <select id='course-section-12-1-3-1-2-2-input-2' name="Course Type">
+                <div id="course-section-11-1-3-1-2-2">
+                    <input type="phone" id="course-section-11-1-3-1-2-2-input-1" placeholder='Phone number' />
+                    <select id='course-section-11-1-3-1-2-2-input-2' name="Course Type">
                     <option>Selected Course</option>
                     </select>
                 </div>
-                <div id="course-section-12-1-3-1-2-3">
-                    <textarea type="phone" id="course-section-12-1-3-1-2-3-input-1" placeholder='Address' />
+                <div id="course-section-11-1-3-1-2-3">
+                    <textarea type="phone" id="course-section-11-1-3-1-2-3-input-1" placeholder='Address' />
                 </div>
-                <button id="course-section-12-1-3-1-2-3-button">Enquiry Now</button>
+                <button id="course-section-11-1-3-1-2-3-button">Enquiry Now</button>
                </form>
              </div>
          </div>
-         <div id="course-section-12-1-3-1-3">
-            <img id="course-section-12-1-3-1-3-img" src={img4} alt={img4} />
+         <div id="course-section-11-1-3-1-3">
+            <img id="course-section-11-1-3-1-3-img" src={img4} alt={img4} />
          </div>
        </div>
      </div>
