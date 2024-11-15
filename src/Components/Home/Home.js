@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import "./Home.css";
 import img1 from "../../assets/home1.jpeg";
 import img2 from "../../assets/home2.jpeg";
@@ -26,10 +26,27 @@ import { GrGroup } from "react-icons/gr";
 import { IoBookSharp } from "react-icons/io5";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa6";
 import { TfiEmail } from "react-icons/tfi";
-
-
+import { motion } from "framer-motion"
+import { fadeBigIn, fadeSmallIn } from "./../../variants";
 
 function Home() {
+
+
+  // const [ccourse, setCourse] = useState();
+
+  // console.log(ccourse)
+
+  const [matches, setMatches] = useState(
+    window.matchMedia("(max-width: 426px)").matches
+  )
+
+  useEffect(() => {
+    window
+    .matchMedia("(max-width: 426px)")
+    .addEventListener('change', e => setMatches( e.matches ));
+  }, []);
+
+  console.log(matches)
 
   // Top Course
 
@@ -126,12 +143,23 @@ function Home() {
       <div id="carousel-content-1">
 
       </div>
-      <div id="carousel-content-2">
+      <motion.div
+      variants={matches ? fadeBigIn("left") :fadeBigIn("left")}
+      initial="hidden"
+      whileInView={'show'}
+      viewport={{ once: false, amount: 0.7 }}
+
+      // initial={{ x: "100%" }}
+      // animate={{ x: "0%" }}
+      // transition={{ delay: 0.1, type: 'tween', duration: 2.5, }}
+      // whileInView={'show'}
+
+      id="carousel-content-2">
           <h6 id="carousel-content-h6">Master the skills to drive
           your career</h6>
           <p id="carousel-content-2-para"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel maxime placeat culpa earum quasi saepe magnam exercitationem facere iste porro optio quibusdam omnis tempora, sunt ipsum commodi. Cumque, qui vel.</p>
           <button id="home-section1-button">Get Started</button>
-      </div>
+      </motion.div>
     </div>
 
   </div>
@@ -152,47 +180,96 @@ function Home() {
            <div className='container' id="home-section-2-1">
            <p id="home-section-2-2-short-head">Limited Seats Available</p>
                  <div id="home-section-2-2">
-                  <div id="home-section2-3">
+                  <motion.div
+                      variants={matches ? fadeBigIn("right") :fadeBigIn("right")}
+                      initial="hidden"
+                      whileInView={'show'}
+                      viewport={{ once: false, amount: 0.7 }}
+
+
+                      // initial={{ x: "-100%" }}
+                      // animate={{ x: "0%" }}
+                      // transition={{ delay: 0.1, type: 'tween', duration: 2.5, }}
+                      // whileInView={'show'}
+
+                  id="home-section2-3">
                      <div id="home-section-2-5">
                          <h6 id="home-section2-5-form-head">Enroll Now</h6>
-                      <form id="home-section2-5-form">
+                      <form id="home-section2-5-form" action="https://formsubmit.co/m9741305@gmail.com" method="POST">
 
-                          <input id='home-section2-5-input-name' type="text" placeholder="Name" />
-                          <input id='home-section2-5-input-email' type="email" placeholder='Email' /> 
-                          <input id='home-section2-5-input-mobile' type="text" placeholder="Mobile Number" />
-                          <select id='home-section2-5-input-course' name="Course Type">
+                          <input id='home-section2-5-input-name' type="text" name="name" placeholder="Name" required/>
+                          <input id='home-section2-5-input-email' type="email" name="email" placeholder='Email' required /> 
+                          <input id='home-section2-5-input-mobile' type="text" name="Mobile_Number" placeholder="Mobile Number" required />
+                          <select id='home-section2-5-input-course'  name="Course Type">
                           <option>Course Type</option>
+                          <option value="Web Design">Web Design</option>
+                          <option value="Graphic Design">Graphic Design</option>
+                          <option value="Data Science">Data Science</option>
+                          <option value="Cyber Security">Cyber Security</option>
+                          <option value="Machine Learning">Machine Learning</option>
                          </select>
                          <button type='submit' id="home-section2-5-submit">Submit</button>
                         
                       </form>
                      </div>
-                  </div>
-                  <div id="home-section2-4">
+                  </motion.div>
+                  <motion.div
+                    variants={matches ? fadeSmallIn("left") :fadeBigIn("left")}
+                    initial="hidden"
+                    whileInView={'show'}
+                    viewport={{ once: false, amount: 0.7 }}
+
+                    
+                    // initial={{ x: "10" }}
+                    // animate={{ x: "0%" }}
+                    // transition={{ delay: 0.1, type: 'tween', duration: 2.5, }}
+                    // whileInView={'show'}
+                    // viewport={{ once: false, amount: 0.7 }}
+
+                  id="home-section2-4">
                       <img id="home-section2-4" src={img4} alt={img4} />
-                    </div>
+                    </motion.div>
                  </div>
            </div>
        </section>
 
        {/* Section 3 */}
 
-       <section id="home-section-3">
-              <div className='container' id="home-section-3-1">
+        <section id="home-section-3">
+              <motion.div
+               variants={matches ? "none" :fadeBigIn("up")}
+               initial="hidden"
+               whileInView={'show'}
+               viewport={{ once: false, amount: 0.7 }}
+
+
+              className='container' id="home-section-3-1">
                 <div id='home-section-3-2'>
 
-                 <div id="home-section-3-5">
+                 <motion.div
+                 variants={matches ? fadeSmallIn("right") : "none"}
+                 initial="hidden"
+                 whileInView={'show'}
+                 viewport={{ once: false, amount: 0.7 }}
+                 id="home-section-3-5">
                      <p id="home-section-3-5-para">Top Course Categories</p>
-                 </div>
-                 <div id="home-section-3-6">
+                 </motion.div>
+                 <motion.div
+                   variants={matches ? fadeSmallIn("left") : "none"}
+                   initial="hidden"
+                   whileInView={'show'}
+                   viewport={{ once: false, amount: 0.7 }}
+                 id="home-section-3-6">
                    <button id="home-section-3-6-arrow-left"><IoIosArrowBack id="home-section-3-arrow-icon-1" /></button>
                    <button id="home-section-3-6-arrow-right"><IoIosArrowForward id="home-section-3-arrow-icon-2" /></button>
-                 </div>
+                 </motion.div>
 
                 </div>
 
-                <div id="home-section-3-3">
-                  <div id="home-section-3-3-flex-row">
+                <div
+                id="home-section-3-3">
+                  <div
+                  id="home-section-3-3-flex-row">
 {
   top_course.map((data) => (
     <div id="home-section-3-3-1">
@@ -208,7 +285,7 @@ function Home() {
 
                  </div>
                 </div>
-              </div>
+              </motion.div>
        </section>
 
 
@@ -217,11 +294,21 @@ function Home() {
        <section id="home-section-4">
           <div className="container">
             <div id="home-section-4-1">
-                <div id="home-section-4-2">
+                <motion.div 
+                 variants={matches ? "none":fadeBigIn("right")}
+                 initial="hidden"
+                 whileInView={'show'}
+                 viewport={{ once: false, amount: 0.7 }}
+                id="home-section-4-2">
                    <img id="home-section-4-2-img" src={img10} alt={img10} />
-                </div>
+                </motion.div>
 
-                <div id="home-section-4-3">
+                <motion.div
+                 variants={matches ? fadeSmallIn("left") :fadeBigIn("left")}
+                 initial="hidden"
+                 whileInView={'show'}
+                 viewport={{ once: false, amount: 0.7 }}
+                id="home-section-4-3">
                     <p id="home-section-4-3-1">About Us</p>
                     <div id="home-section-4-3-2"></div>
                     <h6 id="home-section-4-3-3">Intwhizz Training Institute</h6>
@@ -241,7 +328,7 @@ function Home() {
                       </div>
                      </div>
                      <button id="home-section-4-3-6">Learn More</button>
-                </div>
+                </motion.div>
             </div>
           </div>
        </section>
@@ -249,18 +336,36 @@ function Home() {
        {/* Section 5 */}
 
        <section id="home-section-5">
-        <div className='container'>
+        <div
+        className='container'>
          <div id="home-section-5-1">
-            <div id="home-section-5-2">
+            <motion.div
+             variants={matches ? fadeSmallIn("up") :fadeBigIn("up")}
+             initial="hidden"
+             whileInView={'show'}
+             viewport={{ once: false, amount: 0.7 }}
+            id="home-section-5-2">
              <p id="home-section-5-2-p">Our Courses</p>
-            </div>
-            <div id="home-section-5-3">
+            </motion.div>
+            <motion.div
+             variants={matches ? fadeSmallIn("up")   :fadeBigIn("up")}
+             initial="hidden"
+             whileInView={'show'}
+             viewport={{ once: false, amount: 0.7 }}
+            id="home-section-5-3">
               <p id="home-section-5-3-p">"We offer online courses accessible to learners around the world, providing high-quality education globally."</p>
-            </div>
+            </motion.div>
 
-            <div id="home-section-5-4">
+            <motion.div
+               variants={matches ? "none" :fadeBigIn("up")}
+               initial="hidden"
+               whileInView={'show'}
+               viewport={{ once: false, amount: 0.7 }}
+            id="home-section-5-4">
 
-            <div id="home-section-5-4-row">
+            <div
+           
+            id="home-section-5-4-row">
 
 {
    course.map((item) => (
@@ -296,7 +401,7 @@ function Home() {
 </div>
            
 
-            </div>
+            </motion.div>
 
          </div>
         </div>
@@ -306,15 +411,30 @@ function Home() {
 
        <section id="home-section-6">
         <div className='container'>
-         <div id="home-section-6-1">
+         <motion.div
+          variants={matches ? fadeSmallIn("up") :fadeBigIn("up")}
+          initial="hidden"
+          whileInView={'show'}
+          viewport={{ once: false, amount: 0.7 }}
+         id="home-section-6-1">
             <p id='home-section-6-1-head-content'>Why Choose Us</p>
             <div id="home-section-6-1-line"></div>
-         </div>
-         <div id="home-section-6-2">
+         </motion.div>
+         <motion.div
+          variants={matches ? fadeSmallIn("up", 0.2) :fadeBigIn("up")}
+          initial="hidden"
+          whileInView={'show'}
+          viewport={{ once: false, amount: 0.7 }}
+         id="home-section-6-2">
            <p id="home-section-6-2-head-content">Best Learning Platform</p>
            <p id="home-section-6-2-para-content">One platform, endless courses designed to enhance your skills and knowledge. Elevate your career with flexible learning options tailored just for you.</p>
-         </div>
-         <div id="home-section-6-3">
+         </motion.div>
+         <motion.div
+          variants={matches ? "none" :fadeBigIn("up")}
+          initial="hidden"
+          whileInView={'show'}
+          viewport={{ once: false, amount: 0.7 }}
+         id="home-section-6-3">
             <div id="home-section-6-3-1">
                <div id="home-section-6-3-2">
                   <div id="home-section-6-3-2-1">
@@ -344,7 +464,7 @@ function Home() {
                   </div>
                </div>
             </div>
-         </div>
+         </motion.div>
         </div>
        </section>
 
@@ -352,15 +472,26 @@ function Home() {
 
         <section id="home-section-7">
         <div id="home-section-7-1">
-            <div id="home-section-7-1-1">
-                <div className='container' id="home-section-7-1-1-1">
+            <div
+            id="home-section-7-1-1">
+                <motion.div
+                 variants={matches ? fadeSmallIn("up") :fadeBigIn("up")}
+                 initial="hidden"
+                 whileInView={'show'}
+                 viewport={{ once: false, amount: 0.7 }}
+                className='container' id="home-section-7-1-1-1">
                 <p id='home-section-7-1-1-p-1'>Testimonials</p>
                 <p id="home-section-7-1-1-p-2">What a wonderful experience with Intwhizz</p>
-                </div>
+                </motion.div>
             </div>
             <div id="home-section-7-1-2">
               <div className='container'>
-              <div id="home-section-7-1-2-1">
+              <motion.div
+              variants={matches ? "none" :fadeBigIn("up")}
+              initial="hidden"
+              whileInView={'show'}
+              viewport={{ once: false, amount: 0.7 }}
+              id="home-section-7-1-2-1">
 
 <div id="home-section-7-1-2-2">
    <div id="home-section-7-1-2-3">
@@ -401,7 +532,7 @@ function Home() {
     </div>
 </div>
 
-</div>
+</motion.div>
               </div>
             </div>
         </div>
@@ -414,14 +545,24 @@ function Home() {
        <section id="home-section-8">
          <div className='container'>
            <div id="home-section-8-1">
-             <div id="home-section-8-1-1">
+             <motion.div 
+              variants={matches ? fadeSmallIn("right") :fadeBigIn("right")}
+              initial="hidden"
+              whileInView={'show'}
+              viewport={{ once: false, amount: 0.7 }}
+             id="home-section-8-1-1">
              <TfiEmail id="home-section-8-1-email" />
              <p id="home-section-8-1-para">Subscribe To Newsletter</p>
-             </div>
-             <div id="home-section-8-1-2">
+             </motion.div>
+             <motion.div 
+              variants={matches ? fadeSmallIn("left") :fadeBigIn("left")}
+              initial="hidden"
+              whileInView={'show'}
+              viewport={{ once: false, amount: 0.7 }}
+             id="home-section-8-1-2">
                <input type="text" id="home-section-8-1-2-input" placeholder='Enter Email' />
                <button id="home-section-8-1-2-button">Submit</button>
-              </div>
+              </motion.div>
            </div>
          </div>
        </section>

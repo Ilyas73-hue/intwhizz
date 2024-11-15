@@ -57,8 +57,23 @@
     width: 600px;
 }
 
+/* Animation css */
+
+/* @keyframes slideInright{
+    from {
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+} */
+
+
 #carousel-content-2{
     width: 600px;
+
+    animation-name: slideInright;
+    animation-duration: 2s;
 }
 
 
@@ -259,6 +274,20 @@
 
 /* Form css */
 
+/* Animation css */
+
+/* @keyframes slideInleft{
+    from {
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+} */
+
+
+
+
 #home-section-2-5{
     width: 440px;
     height: 60vh;
@@ -269,6 +298,9 @@
     -moz-box-shadow: -1px -1px 8px 0px rgba(0,0,0,0.75);
     box-shadow: -1px -1px 8px 0px rgba(0,0,0,0.75);
     padding: 30px;
+
+    animation-name: slideInleft;
+    animation-duration: 2s;
 }
 
 #home-section2-5-form-head{
@@ -375,11 +407,21 @@
 
 /* Slide css */
 
+/* @keyframes slideInright{
+    from {
+        transform: translateX(100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+} */
 
 #home-section2-4{
     width: 500px;
     height: 60vh;
     object-fit: cover;
+    animation-name: slideInright;
+    animation-duration: 2s;
 }
 
 /* section 2 responsive */
