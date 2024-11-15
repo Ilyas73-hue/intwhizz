@@ -37,12 +37,12 @@ function Home() {
   // console.log(ccourse)
 
   const [matches, setMatches] = useState(
-    window.matchMedia("(max-width: 426px)").matches
+    window.matchMedia("(max-width: 769px)").matches
   )
 
   useEffect(() => {
     window
-    .matchMedia("(max-width: 426px)")
+    .matchMedia("(max-width: 769px)")
     .addEventListener('change', e => setMatches( e.matches ));
   }, []);
 
@@ -144,15 +144,11 @@ function Home() {
 
       </div>
       <motion.div
-      variants={matches ? fadeBigIn("left") :fadeBigIn("left")}
+      variants={matches ? fadeSmallIn("left") :fadeBigIn("left")}
       initial="hidden"
       whileInView={'show'}
       viewport={{ once: false, amount: 0.7 }}
 
-      // initial={{ x: "100%" }}
-      // animate={{ x: "0%" }}
-      // transition={{ delay: 0.1, type: 'tween', duration: 2.5, }}
-      // whileInView={'show'}
 
       id="carousel-content-2">
           <h6 id="carousel-content-h6">Master the skills to drive
@@ -181,16 +177,12 @@ function Home() {
            <p id="home-section-2-2-short-head">Limited Seats Available</p>
                  <div id="home-section-2-2">
                   <motion.div
-                      variants={matches ? fadeBigIn("right") :fadeBigIn("right")}
+                      variants={matches ? fadeSmallIn("right") :fadeBigIn("right")}
                       initial="hidden"
                       whileInView={'show'}
                       viewport={{ once: false, amount: 0.7 }}
 
 
-                      // initial={{ x: "-100%" }}
-                      // animate={{ x: "0%" }}
-                      // transition={{ delay: 0.1, type: 'tween', duration: 2.5, }}
-                      // whileInView={'show'}
 
                   id="home-section2-3">
                      <div id="home-section-2-5">
@@ -214,17 +206,10 @@ function Home() {
                      </div>
                   </motion.div>
                   <motion.div
-                    variants={matches ? fadeSmallIn("left") :fadeBigIn("left")}
+                    variants={matches ? "none" :fadeBigIn("left")}
                     initial="hidden"
                     whileInView={'show'}
                     viewport={{ once: false, amount: 0.7 }}
-
-                    
-                    // initial={{ x: "10" }}
-                    // animate={{ x: "0%" }}
-                    // transition={{ delay: 0.1, type: 'tween', duration: 2.5, }}
-                    // whileInView={'show'}
-                    // viewport={{ once: false, amount: 0.7 }}
 
                   id="home-section2-4">
                       <img id="home-section2-4" src={img4} alt={img4} />
@@ -236,18 +221,12 @@ function Home() {
        {/* Section 3 */}
 
         <section id="home-section-3">
-              <motion.div
-               variants={matches ? "none" :fadeBigIn("up")}
-               initial="hidden"
-               whileInView={'show'}
-               viewport={{ once: false, amount: 0.7 }}
-
-
+              <div
               className='container' id="home-section-3-1">
                 <div id='home-section-3-2'>
 
                  <motion.div
-                 variants={matches ? fadeSmallIn("right") : "none"}
+                 variants={matches ? fadeSmallIn("right") :fadeBigIn("right")}
                  initial="hidden"
                  whileInView={'show'}
                  viewport={{ once: false, amount: 0.7 }}
@@ -255,7 +234,7 @@ function Home() {
                      <p id="home-section-3-5-para">Top Course Categories</p>
                  </motion.div>
                  <motion.div
-                   variants={matches ? fadeSmallIn("left") : "none"}
+                    variants={matches ? fadeSmallIn("left")  :fadeBigIn("left")}
                    initial="hidden"
                    whileInView={'show'}
                    viewport={{ once: false, amount: 0.7 }}
@@ -272,20 +251,25 @@ function Home() {
                   id="home-section-3-3-flex-row">
 {
   top_course.map((data) => (
-    <div id="home-section-3-3-1">
+    <motion.div
+    variants={matches ? fadeSmallIn("up")  :fadeBigIn("up")}
+    initial="hidden"
+    whileInView={'show'}
+    viewport={{ once: false, amount: 0.7 }}
+    id="home-section-3-3-1">
     <div id="home-section-3-3-2">
       <img id="home-section-3-3-img" src={data.image} alt={data.image} />
     </div>
     <div id="home-section-3-3-3">
      <p id="home-section-3-3-para">{data.name}</p>                   
     </div>
- </div>
+ </motion.div>
   ))
 }
 
                  </div>
                 </div>
-              </motion.div>
+              </div>
        </section>
 
 
@@ -295,7 +279,7 @@ function Home() {
           <div className="container">
             <div id="home-section-4-1">
                 <motion.div 
-                 variants={matches ? "none":fadeBigIn("right")}
+                 variants={matches ? "none" :fadeBigIn("right")}
                  initial="hidden"
                  whileInView={'show'}
                  viewport={{ once: false, amount: 0.7 }}
@@ -356,11 +340,8 @@ function Home() {
               <p id="home-section-5-3-p">"We offer online courses accessible to learners around the world, providing high-quality education globally."</p>
             </motion.div>
 
-            <motion.div
-               variants={matches ? "none" :fadeBigIn("up")}
-               initial="hidden"
-               whileInView={'show'}
-               viewport={{ once: false, amount: 0.7 }}
+            <div
+             
             id="home-section-5-4">
 
             <div
@@ -369,7 +350,12 @@ function Home() {
 
 {
    course.map((item) => (
- <div id="home-section-5-4-card">
+ <motion.div
+ variants={matches ? fadeSmallIn("left") : fadeBigIn("left")}
+initial="hidden"
+whileInView={'show'}
+viewport={{ once: false, amount: 0.7 }}
+ id="home-section-5-4-card">
  <div id="home-section-5-4-1-head">
     <img id="home-section-5-4-1-img" src={item.image} alt={item.image} />
  </div>
@@ -386,22 +372,32 @@ function Home() {
      <div id='home-section-5-4-1-content-3'>
        <p id="home-section-5-4-3-content-1-p-1">{item.description}</p>
      </div>
-     <div id="home-section-5-4-1-content-4">
+     <motion.div
+       variants={matches ? fadeSmallIn("up")  :fadeBigIn("up")}
+       initial="hidden"
+       whileInView={'show'}
+       viewport={{ once: false, amount: 0.7 }}
+     id="home-section-5-4-1-content-4">
        <button id="home-section-5-4-1-button-4">Enroll Now</button>
-     </div>
+     </motion.div>
  </div>
-</div>
+</motion.div>
    ))
 }
 
 </div>
 
-<div id="home-section-5-4-course-button-div">
+<motion.div
+  variants={matches ? fadeSmallIn("up")  :fadeBigIn("up")}
+  initial="hidden"
+  whileInView={'show'}
+  viewport={{ once: false, amount: 0.7 }}
+id="home-section-5-4-course-button-div">
   <button id='home-section-5-4-button'>View All Courses</button>
-</div>
+</motion.div>
            
 
-            </motion.div>
+            </div>
 
          </div>
         </div>
@@ -421,7 +417,7 @@ function Home() {
             <div id="home-section-6-1-line"></div>
          </motion.div>
          <motion.div
-          variants={matches ? fadeSmallIn("up", 0.2) :fadeBigIn("up")}
+          variants={matches ? fadeSmallIn("up") :fadeBigIn("up")}
           initial="hidden"
           whileInView={'show'}
           viewport={{ once: false, amount: 0.7 }}
@@ -430,13 +426,18 @@ function Home() {
            <p id="home-section-6-2-para-content">One platform, endless courses designed to enhance your skills and knowledge. Elevate your career with flexible learning options tailored just for you.</p>
          </motion.div>
          <motion.div
-          variants={matches ? "none" :fadeBigIn("up")}
-          initial="hidden"
-          whileInView={'show'}
-          viewport={{ once: false, amount: 0.7 }}
+          // variants={matches ? fadeBigIn("up") :fadeBigIn("up")}
+          // initial="hidden"
+          // whileInView={'show'}
+          // viewport={{ once: false, amount: 0.7 }}
          id="home-section-6-3">
             <div id="home-section-6-3-1">
-               <div id="home-section-6-3-2">
+               <motion.div
+               variants={matches ? fadeSmallIn("up") : fadeBigIn("up")}
+               initial="hidden"
+               whileInView={'show'}
+               viewport={{ once: false, amount: 0.7 }}
+               id="home-section-6-3-2">
                   <div id="home-section-6-3-2-1">
                      <img id="home-section-6-3-2-1-img" src={why1} alt={why1} />
                   </div>
@@ -444,8 +445,13 @@ function Home() {
                     <p id="home-section-6-3-2-2-p-1">Quality Education</p>
                     <p id='home-section-6-3-2-2-p-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
                   </div>
-               </div>
-               <div id="home-section-6-3-2">
+               </motion.div>
+               <motion.div
+               variants={matches ? fadeSmallIn("up") : fadeBigIn("up")}
+               initial="hidden"
+               whileInView={'show'}
+               viewport={{ once: false, amount: 0.7 }}
+               id="home-section-6-3-2">
                   <div id="home-section-6-3-2-1">
                   <GrGroup id="home-section-6-3-2-1-group-icon" />
                   </div>
@@ -453,8 +459,13 @@ function Home() {
                     <p id="home-section-6-3-2-2-p-1">Professional training</p>
                     <p id='home-section-6-3-2-2-p-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
                   </div>
-               </div>
-               <div id="home-section-6-3-2">
+               </motion.div>
+               <motion.div
+               variants={matches ? fadeSmallIn("up") : fadeBigIn("up")}
+               initial="hidden"
+               whileInView={'show'}
+               viewport={{ once: false, amount: 0.7 }}
+               id="home-section-6-3-2">
                   <div id="home-section-6-3-2-1">
                   <IoBookSharp id="home-section-6-3-2-1-group-icon" />
                   </div>
@@ -462,7 +473,7 @@ function Home() {
                     <p id="home-section-6-3-2-2-p-1">Online Learning</p>
                     <p id='home-section-6-3-2-2-p-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
                   </div>
-               </div>
+               </motion.div>
             </div>
          </motion.div>
         </div>
@@ -486,14 +497,16 @@ function Home() {
             </div>
             <div id="home-section-7-1-2">
               <div className='container'>
-              <motion.div
-              variants={matches ? "none" :fadeBigIn("up")}
-              initial="hidden"
-              whileInView={'show'}
-              viewport={{ once: false, amount: 0.7 }}
+              <div
+            
               id="home-section-7-1-2-1">
 
-<div id="home-section-7-1-2-2">
+<motion.div
+  variants={matches ? fadeSmallIn("up") : fadeBigIn("up")}
+  initial="hidden"
+  whileInView={'show'}
+  viewport={{ once: false, amount: 0.7 }}
+id="home-section-7-1-2-2">
    <div id="home-section-7-1-2-3">
     <img id="home-section-7-1-2-3-img" src={test1} alt={test1} />
    </div>
@@ -504,35 +517,45 @@ function Home() {
      <p id="home-section-7-1-2-7-star-flex"> <FaStar id="home-section-7-1-2-7-star-fill" />   <FaStar id="home-section-7-1-2-7-star-fill" />   <FaStar id="home-section-7-1-2-7-star-fill" />   <FaStar id="home-section-7-1-2-7-star-fill" />  <FaStar id="home-section-7-1-2-7-star-unfill" />
       </p>
     </div>
-</div>
-
-<div id="home-section-7-1-2-2">
-   <div id="home-section-7-1-2-3">
-    <img id="home-section-7-1-2-3-img" src={test1} alt={test1} />
-   </div>
-   <div id="home-section-7-1-2-4">
-     <p id="home-section-7-1-2-4-p">Sara</p>
-     <p id="home-section-7-1-2-5-p">Graphic Design Course</p>
-     <p id="home-section-7-1-2-6-p"><FaQuoteLeft id="home-section-7-1-2-6-quote" />  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat officia aliquid iusto illo laboriosam, sit, nostrum id quaerat pariatur repellendus quis ullam hic in, non harum inventore cumque laudantium . <FaQuoteRight id="home-section-7-1-2-6-quote" /></p>
-     <p id="home-section-7-1-2-7-star-flex"> <FaStar id="home-section-7-1-2-7-star-fill" />   <FaStar id="home-section-7-1-2-7-star-fill" />   <FaStar id="home-section-7-1-2-7-star-fill" />   <FaStar id="home-section-7-1-2-7-star-fill" />  <FaStar id="home-section-7-1-2-7-star-unfill" />
-      </p>
-    </div>
-</div>
-
-<div id="home-section-7-1-2-2">
-   <div id="home-section-7-1-2-3">
-    <img id="home-section-7-1-2-3-img" src={test1} alt={test1} />
-   </div>
-   <div id="home-section-7-1-2-4">
-     <p id="home-section-7-1-2-4-p">Sara</p>
-     <p id="home-section-7-1-2-5-p">Graphic Design Course</p>
-     <p id="home-section-7-1-2-6-p"><FaQuoteLeft id="home-section-7-1-2-6-quote" />  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat officia aliquid iusto illo laboriosam, sit, nostrum id quaerat pariatur repellendus quis ullam hic in, non harum inventore cumque laudantium . <FaQuoteRight id="home-section-7-1-2-6-quote" /></p>
-     <p id="home-section-7-1-2-7-star-flex"> <FaStar id="home-section-7-1-2-7-star-fill" />   <FaStar id="home-section-7-1-2-7-star-fill" />   <FaStar id="home-section-7-1-2-7-star-fill" />   <FaStar id="home-section-7-1-2-7-star-fill" />  <FaStar id="home-section-7-1-2-7-star-unfill" />
-      </p>
-    </div>
-</div>
-
 </motion.div>
+
+<motion.div
+variants={matches ? fadeSmallIn("up") : fadeBigIn("up")}
+initial="hidden"
+whileInView={'show'}
+viewport={{ once: false, amount: 0.7 }}
+id="home-section-7-1-2-2">
+   <div id="home-section-7-1-2-3">
+    <img id="home-section-7-1-2-3-img" src={test1} alt={test1} />
+   </div>
+   <div id="home-section-7-1-2-4">
+     <p id="home-section-7-1-2-4-p">Sara</p>
+     <p id="home-section-7-1-2-5-p">Graphic Design Course</p>
+     <p id="home-section-7-1-2-6-p"><FaQuoteLeft id="home-section-7-1-2-6-quote" />  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat officia aliquid iusto illo laboriosam, sit, nostrum id quaerat pariatur repellendus quis ullam hic in, non harum inventore cumque laudantium . <FaQuoteRight id="home-section-7-1-2-6-quote" /></p>
+     <p id="home-section-7-1-2-7-star-flex"> <FaStar id="home-section-7-1-2-7-star-fill" />   <FaStar id="home-section-7-1-2-7-star-fill" />   <FaStar id="home-section-7-1-2-7-star-fill" />   <FaStar id="home-section-7-1-2-7-star-fill" />  <FaStar id="home-section-7-1-2-7-star-unfill" />
+      </p>
+    </div>
+</motion.div>
+
+<motion.div
+variants={matches ? fadeSmallIn("up") : fadeBigIn("up")}
+initial="hidden"
+whileInView={'show'}
+viewport={{ once: false, amount: 0.7 }}
+id="home-section-7-1-2-2">
+   <div id="home-section-7-1-2-3">
+    <img id="home-section-7-1-2-3-img" src={test1} alt={test1} />
+   </div>
+   <div id="home-section-7-1-2-4">
+     <p id="home-section-7-1-2-4-p">Sara</p>
+     <p id="home-section-7-1-2-5-p">Graphic Design Course</p>
+     <p id="home-section-7-1-2-6-p"><FaQuoteLeft id="home-section-7-1-2-6-quote" />  Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat officia aliquid iusto illo laboriosam, sit, nostrum id quaerat pariatur repellendus quis ullam hic in, non harum inventore cumque laudantium . <FaQuoteRight id="home-section-7-1-2-6-quote" /></p>
+     <p id="home-section-7-1-2-7-star-flex"> <FaStar id="home-section-7-1-2-7-star-fill" />   <FaStar id="home-section-7-1-2-7-star-fill" />   <FaStar id="home-section-7-1-2-7-star-fill" />   <FaStar id="home-section-7-1-2-7-star-fill" />  <FaStar id="home-section-7-1-2-7-star-unfill" />
+      </p>
+    </div>
+</motion.div>
+
+</div>
               </div>
             </div>
         </div>

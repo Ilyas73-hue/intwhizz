@@ -21,6 +21,9 @@ export const fadeBigIn = (direction, delay) => {
 }
 
 
+
+
+
 export const fadeSmallIn = (direction, delay) => {
     return{
         hidden: {
