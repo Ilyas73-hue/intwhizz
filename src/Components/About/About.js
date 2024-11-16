@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import "./About.css";
 import { FaAngleRight } from "react-icons/fa6";
 import img4 from "../../assets/home4.png";
@@ -22,9 +22,20 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
-
+import { motion } from "framer-motion";
+import { fadeBigIn, fadeSmallIn } from "./../../variants";
 
 function About() {
+
+  const [matches, setMatches] = useState(
+    window.matchMedia("(max-width: 769px)").matches
+  )
+
+  useEffect(() => {
+    window
+    .matchMedia("(max-width: 769px)")
+    .addEventListener('change', e => setMatches( e.matches ));
+  }, []);
 
   // Top Course
 
@@ -79,10 +90,15 @@ function About() {
       {/* About Section 1 */}
 
       <section id="about-section-1">
-        <div className='container' id='about-section-1-1'>
+        <motion.div
+              variants={matches ? fadeSmallIn("down") :fadeBigIn("down")}
+              initial="hidden"
+              whileInView={'show'}
+              viewport={{ once: false, amount: 0.7 }}
+        className='container' id='about-section-1-1'>
         <h6 id="about-section-1-h6-1">About Us</h6>
         <p id="about-section-1-p-1">Home <FaAngleRight id="about-section-1-icons" /> About Us</p>
-        </div>
+        </motion.div>
       </section>
 
            {/* About Section 2 */}
@@ -91,13 +107,23 @@ function About() {
               <div className='container' id="about-section-2-1">
                 <div id='about-section-2-2'>
 
-                 <div id="about-section-2-5">
+                 <motion.div
+                 variants={matches ? fadeSmallIn("right") :fadeBigIn("right")}
+                 initial="hidden"
+                 whileInView={'show'}
+                 viewport={{ once: false, amount: 0.7 }}
+                 id="about-section-2-5">
                      <p id="about-section-2-5-para">Top Course Categories</p>
-                 </div>
-                 <div id="about-section-2-6">
+                 </motion.div>
+                 <motion.div
+                   variants={matches ? fadeSmallIn("left")  :fadeBigIn("left")}
+                   initial="hidden"
+                   whileInView={'show'}
+                   viewport={{ once: false, amount: 0.7 }}
+                 id="about-section-2-6">
                    <button id="about-section-2-6-arrow-left"><IoIosArrowBack id="about-section-2-arrow-icon-1" /></button>
                    <button id="about-section-2-6-arrow-right"><IoIosArrowForward id="about-section-2-arrow-icon-2" /></button>
-                 </div>
+                 </motion.div>
 
                 </div>
 
@@ -105,14 +131,19 @@ function About() {
                   <div id="about-section-2-3-flex-row">
 {
   top_course.map((data) => (
-    <div id="about-section-2-3-1">
+    <motion.div
+    variants={matches ? fadeSmallIn("right")  :fadeBigIn("up")}
+    initial="hidden"
+    whileInView={'show'}
+    viewport={{ once: false, amount: 0.7 }}
+    id="about-section-2-3-1">
     <div id="about-section-2-3-2">
       <img id="about-section-2-3-img" src={data.image} alt={data.image} />
     </div>
     <div id="about-section-2-3-3">
      <p id="about-section-2-3-para">{data.name}</p>                   
     </div>
- </div>
+ </motion.div>
   ))
 }
 
@@ -128,11 +159,21 @@ function About() {
        <section id="about-section-3">
 <div className="container">
   <div id="about-section-3-1">
-      <div id="about-section-3-2">
+      <motion.div
+      variants={matches ? "none" :fadeBigIn("right")}
+      initial="hidden"
+      whileInView={'show'}
+      viewport={{ once: false, amount: 0.7 }}
+      id="about-section-3-2">
          <img id="about-section-3-2-img" src={img10} alt={img10} />
-      </div>
+      </motion.div>
 
-      <div id="about-section-3-3">
+      <motion.div
+        variants={matches ? fadeSmallIn("left") :fadeBigIn("left")}
+        initial="hidden"
+        whileInView={'show'}
+        viewport={{ once: false, amount: 0.7 }}
+      id="about-section-3-3">
           <p id="about-section-3-3-1">About Us</p>
           <div id="about-section-3-3-2"></div>
           <h6 id="about-section-3-3-3">Intwhizz Training Institute</h6>
@@ -152,7 +193,7 @@ function About() {
             </div>
            </div>
            <button id="about-section-3-3-6">Learn More</button>
-      </div>
+      </motion.div>
   </div>
 </div>
 </section>
@@ -161,11 +202,21 @@ function About() {
 
        <section id="about-section-4">
             <div className='container' id="about-section-4-1">
-              <div id="about-section-4-1-1">
+              <motion.div
+                variants={matches ? fadeSmallIn("up") :fadeBigIn("up")}
+                initial="hidden"
+                whileInView={'show'}
+                viewport={{ once: false, amount: 0.7 }}
+              id="about-section-4-1-1">
                   <p id="about-section-4-1-1-p">Advanced Certification Courses SUNY-NEF-RIMSR</p>
-              </div>
+              </motion.div>
               <div id="about-section-4-1-2">
-                <div id="about-section-4-1-2-1">
+                <motion.div
+                  variants={matches ? fadeSmallIn("right") :fadeBigIn("right")}
+                  initial="hidden"
+                  whileInView={'show'}
+                  viewport={{ once: false, amount: 0.7 }}
+                id="about-section-4-1-2-1">
                    <p id="about-section-4-1-2-1-p-1">
                    The State University of New York (SUNY) at Potsdam, USA, and the National Education Foundation (NEF) at Washington DC, USA & RIMSR, Bangalore have come together to accomplish the objective of the mission-driven Skill Development Program titled “Make India Great – MIG.”
                    </p>
@@ -175,10 +226,15 @@ function About() {
                    <p id="about-section-4-1-2-1-p-3">
                    The courses are world-class, comprehensive in content, developed keeping in focus application of the domain knowledge on the job, and delivered online by Skill Soft, USA, a world-renowned education content provider with joint certifications by SUNY & NEF.
                    </p>
-                </div>
-                <div id="about-section-4-1-2-2">
+                </motion.div>
+                <motion.div
+                  variants={matches ? "none" :fadeBigIn("left")}
+                  initial="hidden"
+                  whileInView={'show'}
+                  viewport={{ once: false, amount: 0.7 }}
+                id="about-section-4-1-2-2">
                 <img id="about-section-4-1-2-1-img" src={img11} alt={img11} />
-                </div>
+                </motion.div>
               </div>
             </div>
        </section>
@@ -187,21 +243,31 @@ function About() {
 
         <section id="about-section-5">
         <div className='container'>
-           <div id="about-section-5-1">
+           <motion.div
+             variants={matches ? fadeSmallIn("left") :fadeBigIn("up")}
+             initial="hidden"
+             whileInView={'show'}
+             viewport={{ once: false, amount: 0.7 }}
+           id="about-section-5-1">
            <img id="about-section-5-1-img" src={logo1} alt={logo1} />
            <img id="about-section-5-1-img" src={logo2} alt={logo2} />
            <img id="about-section-5-1-img" src={logo3} alt={logo3} />
            <img id="about-section-5-1-img" src={logo4} alt={logo4} />
-           </div>
+           </motion.div>
         </div>
         </section>
 
        {/* About Section 6 */}
 
         <section id="about-section-6">
-            <div className='container'>
+            <motion.div
+              variants={matches ? fadeSmallIn("up") :fadeBigIn("up")}
+              initial="hidden"
+              whileInView={'show'}
+              viewport={{ once: false, amount: 0.7 }}
+            className='container'>
                 <p id="home-section-6-p">The ”Advanced Certification Courses” of SUNY-NEF-RIMSR that are offered as follows:</p>
-            </div>
+            </motion.div>
         </section>
 
         {/* About Section 7 */}
@@ -209,25 +275,40 @@ function About() {
         <section id="about-section-7"> 
          <div className='container'>
             <div id="about-section-7-1">
-               <div id="about-section-7-1-1">
+               <motion.div 
+                 variants={matches ? fadeSmallIn("down") :fadeBigIn("down")}
+                 initial="hidden"
+                 whileInView={'show'}
+                 viewport={{ once: false, amount: 0.7 }}
+               id="about-section-7-1-1">
                   <p id="about-section-7-1-1-p">Trending Courses</p>
-               </div>
+               </motion.div>
 
-               <div id="about-section-7-1-2">
+               <motion.div
+                 variants={matches ? fadeSmallIn("up") :fadeBigIn("up")}
+                 initial="hidden"
+                 whileInView={'show'}
+                 viewport={{ once: false, amount: 0.7 }}
+               id="about-section-7-1-2">
                   <h6 id="about-section-7-1-2-h6">Get Quality Education with Intwhizz Academy</h6>
-               </div>
+               </motion.div>
                 
                <div id="about-section-7-1-3">
                 {
                     trending_course_1.map((item) => (
-                        <div id="about-section-7-1-3-1">
+                        <motion.div
+                        variants={matches ? fadeSmallIn("up") :fadeBigIn("up")}
+                        initial="hidden"
+                        whileInView={'show'}
+                        viewport={{ once: false, amount: 0.7 }}
+                        id="about-section-7-1-3-1">
                         <div id="about-section-7-1-3-1-1">
                           <img src={item.image} alt={item.image} />
                         </div>
                         <div id="about-section-7-1-3-1-2">
                           <p id="about-section-7-1-3-1-2-p">{item.name}</p>
                         </div>
-                        </div>
+                        </motion.div>
                     ))
                 }
                </div>
@@ -235,14 +316,19 @@ function About() {
                <div id="about-section-7-1-4">
                 {
                     trending_course_2.map((item) => (
-                        <div id="about-section-7-1-4-1">
+                        <motion.div
+                        variants={matches ? fadeSmallIn("up") :fadeBigIn("up")}
+                        initial="hidden"
+                        whileInView={'show'}
+                        viewport={{ once: false, amount: 0.7 }}
+                        id="about-section-7-1-4-1">
                         <div id="about-section-7-1-4-1-1">
                           <img src={item.image} alt={item.image} />
                         </div>
                         <div id="about-section-7-1-4-1-2">
                           <p id="about-section-7-1-4-1-2-p">{item.name}</p>
                         </div>
-                        </div>
+                        </motion.div>
                     ))
                 }
                </div>
@@ -258,12 +344,22 @@ function About() {
        <section id="about-section-8">
           <div className='container'>
              <div id='about-section-8-1'>
-               <div id="about-section-8-1-1">
+               <motion.div
+                 variants={matches ? fadeSmallIn("down") :fadeBigIn("down")}
+                 initial="hidden"
+                 whileInView={'show'}
+                 viewport={{ once: false, amount: 0.7 }}
+               id="about-section-8-1-1">
                   <p id="about-section-8-1-1-p">Contact</p>
-               </div>
+               </motion.div>
 
                <div id="about-section-8-1-2">
-                  <div id="about-section-8-1-2-1">
+                  <motion.div
+                    variants={matches ? fadeSmallIn("up") :fadeBigIn("up")}
+                    initial="hidden"
+                    whileInView={'show'}
+                    viewport={{ once: false, amount: 0.7 }}
+                  id="about-section-8-1-2-1">
                      <div id="about-section-8-1-2-1-1">
                      <FaPhoneAlt id="about-section-8-1-2-2-phone" />
                      </div>
@@ -271,8 +367,13 @@ function About() {
                        <p id="about-section-8-1-2-1-2-p-1">Phone Number</p>
                        <p id="about-section-8-1-2-1-2-p-2">+91 90437 21244</p>
                      </div>
-                  </div>
-                  <div id="about-section-8-1-2-2">
+                  </motion.div>
+                  <motion.div
+                    variants={matches ? fadeSmallIn("up") :fadeBigIn("up")}
+                    initial="hidden"
+                    whileInView={'show'}
+                    viewport={{ once: false, amount: 0.7 }}
+                  id="about-section-8-1-2-2">
                   <div id="about-section-8-1-2-2-1">
                      <MdEmail id="about-section-8-1-2-2-email" />
                      </div>
@@ -280,8 +381,13 @@ function About() {
                        <p id="about-section-8-1-2-2-2-p-1">Email</p>
                        <p id="about-section-8-1-2-2-2-p-2">info@intwhizz.in</p>
                      </div>
-                  </div>
-                  <div id="about-section-8-1-2-3">
+                  </motion.div>
+                  <motion.div
+                    variants={matches ? fadeSmallIn("up") :fadeBigIn("up")}
+                    initial="hidden"
+                    whileInView={'show'}
+                    viewport={{ once: false, amount: 0.7 }}
+                  id="about-section-8-1-2-3">
                   <div id="about-section-8-1-2-3-1">
                      <IoLocationSharp id="about-section-8-1-2-3-location" />
                      </div>
@@ -289,12 +395,17 @@ function About() {
                        <p id="about-section-8-1-2-3-2-p-1">Address</p>
                        <p id="about-section-8-1-2-3-2-p-2">3 A/1 1st Floor, 60 Feet Road, STC College Road, Near Indian Bank, Perumalpuram,Tirunelveli 627007</p>
                      </div>
-                  </div>
+                  </motion.div>
                </div>
 
                <div id="about-section-8-1-3">
                  <div id="about-section-8-1-3-1">
-                   <div id="about-section-8-1-3-1-1">
+                   <motion.div
+                     variants={matches ? fadeSmallIn("right") :fadeBigIn("right")}
+                     initial="hidden"
+                     whileInView={'show'}
+                     viewport={{ once: false, amount: 0.7 }}
+                   id="about-section-8-1-3-1-1">
                        <p id="about-section-8-1-3-1-1-p"> Get Enquiry Now </p> 
                        <div id="about-section-8-1-3-1-1-line">
                        </div> 
@@ -316,10 +427,15 @@ function About() {
                           <button id="about-section-8-1-3-1-2-3-button">Enquiry Now</button>
                          </form>
                        </div>
-                   </div>
-                   <div id="about-section-8-1-3-1-3">
+                   </motion.div>
+                   <motion.div
+                     variants={matches ? "none" :fadeBigIn("left")}
+                     initial="hidden"
+                     whileInView={'show'}
+                     viewport={{ once: false, amount: 0.7 }}
+                   id="about-section-8-1-3-1-3">
                       <img id="about-section-8-1-3-1-3-img" src={img4} alt={img4} />
-                   </div>
+                   </motion.div>
                  </div>
                </div>
 

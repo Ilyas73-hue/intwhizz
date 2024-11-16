@@ -26,7 +26,7 @@ import { GrGroup } from "react-icons/gr";
 import { IoBookSharp } from "react-icons/io5";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa6";
 import { TfiEmail } from "react-icons/tfi";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 import { fadeBigIn, fadeSmallIn } from "./../../variants";
 
 function Home() {
