@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{ useState, useEffect } from 'react';
 import "./Course.css";
 import { FaAngleRight } from "react-icons/fa6";
 import { IoSearch } from "react-icons/io5";
@@ -26,9 +26,21 @@ import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { IoLocationSharp } from "react-icons/io5";
-
+import { motion } from "framer-motion";
+import { fadeBigIn, fadeSmallIn } from "./../../variants";
 
 function Course() {
+
+
+  const [matches, setMatches] = useState(
+    window.matchMedia("(max-width: 769px)").matches
+  )
+
+  useEffect(() => {
+    window
+    .matchMedia("(max-width: 769px)")
+    .addEventListener('change', e => setMatches( e.matches ));
+  }, []);
 
   
   const course_1 = [{
@@ -543,10 +555,15 @@ const productive_collaboration = [{
 
 
 <section id="course-section-1">
-<div className='container' id='course-section-1-1'>
+<motion.div
+   variants={matches ? fadeSmallIn("down") :fadeBigIn("down")}
+   initial="hidden"
+   whileInView={'show'}
+   viewport={{ once: false, amount: 0.7 }}
+className='container' id='course-section-1-1'>
 <h6 id="course-section-1-h6-1">Courses</h6>
 <p id="course-section-1-p-1">Home <FaAngleRight id="course-section-1-icons" /> Courses</p>
-</div>
+</motion.div>
 </section>
 
 
@@ -555,17 +572,27 @@ const productive_collaboration = [{
 <section id="course-section-2">
     <div className='container'>
     <div id="course-section-2-1">
-      <div id="course-section-2-1-1">
+      <motion.div
+         variants={matches ? "none" :fadeBigIn("right")}
+         initial="hidden"
+         whileInView={'show'}
+         viewport={{ once: false, amount: 0.7 }}
+      id="course-section-2-1-1">
         <p id="course-section-2-1-1-p-1">Courses</p>
         <p id="course-section-2-1-1-p-2">"We offer online courses accessible to learners around the world, providing high-quality education globally."</p>
-      </div>
-      <div id="course-section-2-1-2">
+      </motion.div>
+      <motion.div
+         variants={matches ? fadeSmallIn("left") :fadeBigIn("left")}
+         initial="hidden"
+         whileInView={'show'}
+         viewport={{ once: false, amount: 0.7 }}
+      id="course-section-2-1-2">
         <p id="course-section-2-1-2-p-1">Search</p>
         <div id="course-section-2-1-2-div">
         <input type="text" id="course-section-2-1-2-input" placeholder='Find your course' />
         <IoSearch id="course-section-2-1-2-icons" />
         </div>
-      </div>
+      </motion.div>
     </div>
     </div>
 </section>
@@ -575,13 +602,23 @@ const productive_collaboration = [{
 <section id="course-section-3">
    <div className='container'>
       <div id="course-section-3-1">
-       <div id="course-section-3-1-1">
+       <motion.div
+       variants={matches ? "none" :fadeBigIn("right")}
+       initial="hidden"
+       whileInView={'show'}
+       viewport={{ once: false, amount: 0.7 }}
+       id="course-section-3-1-1">
            
-       </div>
-       <div id="course-section-3-1-2">
+       </motion.div>
+       <motion.div
+          variants={matches ? fadeSmallIn("right") :fadeBigIn("left")}
+          initial="hidden"
+          whileInView={'show'}
+          viewport={{ once: false, amount: 0.7 }}
+       id="course-section-3-1-2">
            <p id="course-section-3-1-2-p-1">Popular Management Course</p>
            <p id="course-section-3-1-2-p-2"> SUNY and NEF University have added more Job-Ready courses under the MAKE INDIA GREAT PROGRAM – MIG. Now, 103 Courses are available in high-demand learning areas at an affordable fee structure to students, and professionals.</p>
-           </div>
+           </motion.div>
       </div>
    </div>
 </section>
@@ -596,7 +633,12 @@ const productive_collaboration = [{
             {
                course_1.map((item) => (
                 
-             <div id="course-section-4-1-card">
+             <motion.div
+             variants={matches ? fadeSmallIn("right")  :fadeBigIn("left")}
+             initial="hidden"
+             whileInView={'show'}
+             viewport={{ once: false, amount: 0.7 }}
+             id="course-section-4-1-card">
              <div id="course-section-4-1-1-head">
                 <img id="course-section-4-1-1-img" src={item.image} alt={item.image} />
              </div>
@@ -614,11 +656,16 @@ const productive_collaboration = [{
                  <div id='course-section-4-1-1-content-3'>
                    <p id="course-section-4-1-3-content-1-p-1">{item.description}</p>
                  </div>
-                 <div id="course-section-4-1-1-content-4">
+                 <motion.div
+                   variants={matches ? fadeSmallIn("up")  :fadeBigIn("up")}
+                   initial="hidden"
+                   whileInView={'show'}
+                   viewport={{ once: false, amount: 0.7 }}
+                 id="course-section-4-1-1-content-4">
                    <button id="course-section-4-1-1-button-4">Enroll Now</button>
-                 </div>
+                 </motion.div>
              </div>
-          </div>
+          </motion.div>
                ))
             }
 
@@ -634,11 +681,21 @@ const productive_collaboration = [{
      
      <div id="course-section-5-1">
 
-      <div id="course-section-5-1-1">
+      <motion.div
+        variants={matches ? "none"  : fadeBigIn("right")}
+        initial="hidden"
+        whileInView={'show'}
+        viewport={{ once: false, amount: 0.7 }}
+      id="course-section-5-1-1">
          <img id="course-section-5-1-1-img" src={img1} alt={img1} />
-      </div>
+      </motion.div>
 
-      <div id="course-section-5-1-2">
+      <motion.div
+        variants={matches ? fadeSmallIn("right")  :fadeBigIn("left")}
+        initial="hidden"
+        whileInView={'show'}
+        viewport={{ once: false, amount: 0.7 }}
+      id="course-section-5-1-2">
       
       <p id="course-section-5-1-2-p-1">Interships & Placements</p>
 
@@ -646,7 +703,7 @@ const productive_collaboration = [{
 
       <p id="course-section-5-1-2-p-3">Annually the top ‘Certificate Holders’ in Cyber Security, Artificial Intelligence, Blockchain, Data Science, Machine Learning, Deep Thinking, Ethical Hacking, Big Data, Cloud Computing, and Project Management & all other courses holders are also eligible for Internships & Placements across pan India, and abroad subject to securing “A” grade with distinction.</p>
 
-      </div>
+      </motion.div>
 
      </div>
 
@@ -660,13 +717,23 @@ const productive_collaboration = [{
 <section id="course-section-6">
    <div className='container'>
       <div id="course-section-6-1">
-       <div id="course-section-6-1-1">
+       <motion.div
+         variants={matches ?"none"  :fadeBigIn("right")}
+         initial="hidden"
+         whileInView={'show'}
+         viewport={{ once: false, amount: 0.7 }}
+       id="course-section-6-1-1">
            
-       </div>
-       <div id="course-section-6-1-2">
+       </motion.div>
+       <motion.div
+         variants={matches ? fadeSmallIn("left")  :fadeBigIn("left")}
+         initial="hidden"
+         whileInView={'show'}
+         viewport={{ once: false, amount: 0.7 }}
+       id="course-section-6-1-2">
            <p id="course-section-6-1-2-p-1">IT Certificate Courses</p>
            <p id="course-section-6-1-2-p-2"> Courses are designed to deliver Industry Skills in IT & Management domain to enable placements opportunity.</p>
-           </div>
+           </motion.div>
       </div>
    </div>
 </section>
@@ -682,7 +749,12 @@ const productive_collaboration = [{
 
             {
                course_2.map((item) => (
-             <div id="course-section-7-1-card">
+             <motion.div
+             variants={matches ? fadeSmallIn("left")  :fadeBigIn("left")}
+             initial="hidden"
+             whileInView={'show'}
+             viewport={{ once: false, amount: 0.7 }}
+             id="course-section-7-1-card">
              <div id="course-section-7-1-1-head">
                 <img id="course-section-7-1-1-img" src={item.image} alt={item.image} />
              </div>
@@ -700,11 +772,16 @@ const productive_collaboration = [{
                  <div id='course-section-7-1-1-content-3'>
                    <p id="course-section-7-1-3-content-1-p-1">{item.description}</p>
                  </div>
-                 <div id="course-section-7-1-1-content-4">
+                 <motion.div
+                   variants={matches ? fadeSmallIn("up")  :fadeBigIn("up")}
+                   initial="hidden"
+                   whileInView={'show'}
+                   viewport={{ once: false, amount: 0.7 }}
+                  id="course-section-7-1-1-content-4">
                    <button id="course-section-7-1-1-button-4">Enroll Now</button>
-                 </div>
+                 </motion.div>
              </div>
-          </div>
+          </motion.div>
                ))
             }
 
@@ -718,23 +795,43 @@ const productive_collaboration = [{
   <section id="course-section-8">
    <div className='container'>
      <div id="course-section-8-1">
-      <p id="course-section-8-1-p">Other Top Courses</p>
+      <motion.p
+        variants={matches ? fadeSmallIn("up")  :fadeBigIn("up")}
+        initial="hidden"
+        whileInView={'show'}
+        viewport={{ once: false, amount: 0.7 }}
+      id="course-section-8-1-p">Other Top Courses</motion.p>
        <div id="course-section-8-1-1">
 
           <div id="course-section-8-1-1-1">
-              <div id="course-section-8-1-1-1-1">
+              <motion.div
+          variants={matches ? fadeSmallIn("up")  :fadeBigIn("up")}
+          initial="hidden"
+          whileInView={'show'}
+          viewport={{ once: false, amount: 0.7 }}
+              id="course-section-8-1-1-1-1">
                   <p id="course-section-8-1-1-1-1-p-1">Business Skills</p>
-              </div>
+              </motion.div>
               <div id="course-section-8-1-1-1-2">
                 {
                   business.map((item) => (
                     <div id="course-section-8-1-1-1-2-1">
-                    <div id="course-section-8-1-1-1-2-1-1">
+                    <motion.div
+                    variants={matches ? fadeSmallIn("right")  :fadeBigIn("right")}
+                    initial="hidden"
+                    whileInView={'show'}
+                    viewport={{ once: false, amount: 0.7 }}
+                    id="course-section-8-1-1-1-2-1-1">
                     <GiGraduateCap id="course-section-8-1-1-1-2-1-1-icon"  />
-                    </div>
-                    <div id="course-section-8-1-1-1-2-1-2">
+                    </motion.div>
+                    <motion.div
+                    variants={matches ? fadeSmallIn("left")  :fadeBigIn("left")}
+                    initial="hidden"
+                    whileInView={'show'}
+                    viewport={{ once: false, amount: 0.7 }}
+                    id="course-section-8-1-1-1-2-1-2">
                       <p id="course-section-8-1-1-1-2-1-2-p"> {item.name} </p>
-                    </div>
+                    </motion.div>
                  </div>
                   ))
                 }
@@ -743,19 +840,34 @@ const productive_collaboration = [{
           </div>
 
           <div id="course-section-8-1-1-1">
-              <div id="course-section-8-1-1-1-1">
+              <motion.div
+              variants={matches ? fadeSmallIn("up")  :fadeBigIn("up")}
+              initial="hidden"
+              whileInView={'show'}
+              viewport={{ once: false, amount: 0.7 }}
+              id="course-section-8-1-1-1-1">
                   <p id="course-section-8-1-1-1-1-p-1">IT Skills</p>
-              </div>
+              </motion.div>
               <div id="course-section-8-1-1-1-2">
                 {
                   it_skill.map((item) => (
                     <div id="course-section-8-1-1-1-2-1">
-                    <div id="course-section-8-1-1-1-2-1-1">
+                    <motion.div 
+                    variants={matches ? fadeSmallIn("right")  :fadeBigIn("right")}
+                    initial="hidden"
+                    whileInView={'show'}
+                    viewport={{ once: false, amount: 0.7 }}
+                    id="course-section-8-1-1-1-2-1-1">
                     <GiGraduateCap id="course-section-8-1-1-1-2-1-1-icon"  />
-                    </div>
-                    <div id="course-section-8-1-1-1-2-1-2">
+                    </motion.div>
+                    <motion.div
+                    variants={matches ? fadeSmallIn("left")  :fadeBigIn("left")}
+                    initial="hidden"
+                    whileInView={'show'}
+                    viewport={{ once: false, amount: 0.7 }}
+                    id="course-section-8-1-1-1-2-1-2">
                       <p id="course-section-8-1-1-1-2-1-2-p"> {item.name} </p>
-                    </div>
+                    </motion.div>
                  </div>
                   ))
                 }
@@ -765,19 +877,34 @@ const productive_collaboration = [{
 
 
           <div id="course-section-8-1-1-1">
-              <div id="course-section-8-1-1-1-1">
+              <motion.div
+              variants={matches ? fadeSmallIn("up")  :fadeBigIn("up")}
+              initial="hidden"
+              whileInView={'show'}
+              viewport={{ once: false, amount: 0.7 }}
+              id="course-section-8-1-1-1-1">
                   <p id="course-section-8-1-1-1-1-p-1">Certifications</p>
-              </div>
+              </motion.div>
               <div id="course-section-8-1-1-1-2">
                 {
                   certification.map((item) => (
                     <div id="course-section-8-1-1-1-2-1">
-                    <div id="course-section-8-1-1-1-2-1-1">
+                    <motion.div
+                    variants={matches ? fadeSmallIn("right")  :fadeBigIn("right")}
+                    initial="hidden"
+                    whileInView={'show'}
+                    viewport={{ once: false, amount: 0.7 }}
+                    id="course-section-8-1-1-1-2-1-1">
                     <GiGraduateCap id="course-section-8-1-1-1-2-1-1-icon"  />
-                    </div>
-                    <div id="course-section-8-1-1-1-2-1-2">
+                    </motion.div>
+                    <motion.div
+                    variants={matches ? fadeSmallIn("left")  :fadeBigIn("left")}
+                    initial="hidden"
+                    whileInView={'show'}
+                    viewport={{ once: false, amount: 0.7 }}
+                    id="course-section-8-1-1-1-2-1-2">
                       <p id="course-section-8-1-1-1-2-1-2-p"> {item.name} </p>
-                    </div>
+                    </motion.div>
                  </div>
                   ))
                 }
@@ -787,19 +914,34 @@ const productive_collaboration = [{
 
           
           <div id="course-section-8-1-1-1">
-              <div id="course-section-8-1-1-1-1">
+              <motion.div
+              variants={matches ? fadeSmallIn("up")  :fadeBigIn("up")}
+              initial="hidden"
+              whileInView={'show'}
+              viewport={{ once: false, amount: 0.7 }}
+              id="course-section-8-1-1-1-1">
                   <p id="course-section-8-1-1-1-1-p-1">Productivity & Collaboration</p>
-              </div>
+              </motion.div>
               <div id="course-section-8-1-1-1-2">
                 {
                  productive_collaboration.map((item) => (
                     <div id="course-section-8-1-1-1-2-1">
-                    <div id="course-section-8-1-1-1-2-1-1">
+                    <motion.div
+                    variants={matches ? fadeSmallIn("right")  :fadeBigIn("right")}
+                    initial="hidden"
+                    whileInView={'show'}
+                    viewport={{ once: false, amount: 0.7 }}
+                    id="course-section-8-1-1-1-2-1-1">
                     <GiGraduateCap id="course-section-8-1-1-1-2-1-1-icon"  />
-                    </div>
-                    <div id="course-section-8-1-1-1-2-1-2">
+                    </motion.div>
+                    <motion.div
+                    variants={matches ? fadeSmallIn("left")  :fadeBigIn("left")}
+                    initial="hidden"
+                    whileInView={'show'}
+                    viewport={{ once: false, amount: 0.7 }}
+                    id="course-section-8-1-1-1-2-1-2">
                       <p id="course-section-8-1-1-1-2-1-2-p"> {item.name} </p>
-                    </div>
+                    </motion.div>
                  </div>
                   ))
                 }
@@ -816,17 +958,32 @@ const productive_collaboration = [{
 
   <section id="course-section-9">
         <div className='container'>
-         <div id="course-section-9-1">
+         <motion.div
+         variants={matches ? fadeSmallIn("down")  :fadeBigIn("down")}
+         initial="hidden"
+         whileInView={'show'}
+         viewport={{ once: false, amount: 0.7 }}
+         id="course-section-9-1">
             <p id='course-section-9-1-head-content'>Why Choose Us</p>
             <div id="course-section-9-1-line"></div>
-         </div>
-         <div id="course-section-9-2">
+         </motion.div>
+         <motion.div
+         variants={matches ? fadeSmallIn("up")  :fadeBigIn("up")}
+         initial="hidden"
+         whileInView={'show'}
+         viewport={{ once: false, amount: 0.7 }}
+         id="course-section-9-2">
            <p id="course-section-9-2-head-content">Best Learning Platform</p>
            <p id="course-section-9-2-para-content">One platform, endless courses designed to enhance your skills and knowledge. Elevate your career with flexible learning options tailored just for you.</p>
-         </div>
+         </motion.div>
          <div id="course-section-9-3">
             <div id="course-section-9-3-1">
-               <div id="course-section-9-3-2">
+               <motion.div
+                    variants={matches ? fadeSmallIn("up") : fadeBigIn("up")}
+                    initial="hidden"
+                    whileInView={'show'}
+                    viewport={{ once: false, amount: 0.7 }}
+               id="course-section-9-3-2">
                   <div id="course-section-9-3-2-1">
                      <img id="course-section-9-3-2-1-img" src={why1} alt={why1} />
                   </div>
@@ -834,8 +991,13 @@ const productive_collaboration = [{
                     <p id="course-section-9-3-2-2-p-1">Quality Education</p>
                     <p id='course-section-9-3-2-2-p-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
                   </div>
-               </div>
-               <div id="course-section-9-3-2">
+               </motion.div>
+               <motion.div
+                    variants={matches ? fadeSmallIn("up") : fadeBigIn("up")}
+                    initial="hidden"
+                    whileInView={'show'}
+                    viewport={{ once: false, amount: 0.7 }}
+               id="course-section-9-3-2">
                   <div id="course-section-9-3-2-1">
                   <GrGroup id="course-section-9-3-2-1-group-icon" />
                   </div>
@@ -843,8 +1005,13 @@ const productive_collaboration = [{
                     <p id="course-section-9-3-2-2-p-1">Professional training</p>
                     <p id='course-section-9-3-2-2-p-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
                   </div>
-               </div>
-               <div id="course-section-9-3-2">
+               </motion.div>
+               <motion.div
+                    variants={matches ? fadeSmallIn("up") : fadeBigIn("up")}
+                    initial="hidden"
+                    whileInView={'show'}
+                    viewport={{ once: false, amount: 0.7 }}
+               id="course-section-9-3-2">
                   <div id="course-section-9-3-2-1">
                   <IoBookSharp id="course-section-9-3-2-1-group-icon" />
                   </div>
@@ -852,7 +1019,7 @@ const productive_collaboration = [{
                     <p id="course-section-9-3-2-2-p-1">Online Learning</p>
                     <p id='course-section-9-3-2-2-p-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
                   </div>
-               </div>
+               </motion.div>
             </div>
          </div>
         </div>
@@ -863,16 +1030,26 @@ const productive_collaboration = [{
        <section id="course-section-10">
         <div id="course-section-10-1">
             <div id="course-section-10-1-1">
-                <div className='container' id="course-section-10-1-1-1">
+                <motion.div
+                                 variants={matches ? fadeSmallIn("up") :fadeBigIn("up")}
+                                 initial="hidden"
+                                 whileInView={'show'}
+                                 viewport={{ once: false, amount: 0.7 }}
+                className='container' id="course-section-10-1-1-1">
                 <p id='course-section-10-1-1-p-1'>Testimonials</p>
                 <p id="course-section-10-1-1-p-2">What a wonderful experience with Intwhizz</p>
-                </div>
+                </motion.div>
             </div>
             <div id="course-section-10-1-2">
               <div className='container'>
               <div id="course-section-10-1-2-1">
 
-<div id="course-section-10-1-2-2">
+<motion.div
+  variants={matches ? fadeSmallIn("up") : fadeBigIn("up")}
+  initial="hidden"
+  whileInView={'show'}
+  viewport={{ once: false, amount: 0.7 }}
+id="course-section-10-1-2-2">
    <div id="course-section-10-1-2-3">
     <img id="course-section-10-1-2-3-img" src={test1} alt={test1} />
    </div>
@@ -883,9 +1060,14 @@ const productive_collaboration = [{
      <p id="course-section-10-1-2-7-star-flex"> <FaStar id="course-section-10-1-2-7-star-fill" />   <FaStar id="course-section-10-1-2-7-star-fill" />   <FaStar id="course-section-10-1-2-7-star-fill" />   <FaStar id="course-section-10-1-2-7-star-fill" />  <FaStar id="course-section-10-1-2-7-star-unfill" />
       </p>
     </div>
-</div>
+</motion.div>
 
-<div id="course-section-10-1-2-2">
+<motion.div
+  variants={matches ? fadeSmallIn("up") : fadeBigIn("up")}
+  initial="hidden"
+  whileInView={'show'}
+  viewport={{ once: false, amount: 0.7 }}
+id="course-section-10-1-2-2">
    <div id="course-section-10-1-2-3">
     <img id="course-section-10-1-2-3-img" src={test1} alt={test1} />
    </div>
@@ -896,9 +1078,14 @@ const productive_collaboration = [{
      <p id="course-section-10-1-2-7-star-flex"> <FaStar id="course-section-10-1-2-7-star-fill" />   <FaStar id="course-section-10-1-2-7-star-fill" />   <FaStar id="course-section-10-1-2-7-star-fill" />   <FaStar id="course-section-10-1-2-7-star-fill" />  <FaStar id="course-section-10-1-2-7-star-unfill" />
       </p>
     </div>
-</div>
+</motion.div>
 
-<div id="course-section-10-1-2-2">
+<motion.div
+  variants={matches ? fadeSmallIn("up") : fadeBigIn("up")}
+  initial="hidden"
+  whileInView={'show'}
+  viewport={{ once: false, amount: 0.7 }}
+id="course-section-10-1-2-2">
    <div id="course-section-10-1-2-3">
     <img id="course-section-10-1-2-3-img" src={test1} alt={test1} />
    </div>
@@ -909,7 +1096,7 @@ const productive_collaboration = [{
      <p id="course-section-10-1-2-7-star-flex"> <FaStar id="course-section-10-1-2-7-star-fill" />   <FaStar id="course-section-10-1-2-7-star-fill" />   <FaStar id="course-section-10-1-2-7-star-fill" />   <FaStar id="course-section-10-1-2-7-star-fill" />  <FaStar id="course-section-10-1-2-7-star-unfill" />
       </p>
     </div>
-</div>
+</motion.div>
 
 </div>
               </div>
@@ -925,12 +1112,22 @@ const productive_collaboration = [{
 <section id="course-section-11">
 <div className='container'>
    <div id='course-section-11-1'>
-     <div id="course-section-11-1-1">
+     <motion.div
+      variants={matches ? fadeSmallIn("down") :fadeBigIn("down")}
+      initial="hidden"
+      whileInView={'show'}
+      viewport={{ once: false, amount: 0.7 }}
+     id="course-section-11-1-1">
         <p id="course-section-11-1-1-p">Contact</p>
-     </div>
+     </motion.div>
 
      <div id="course-section-11-1-2">
-        <div id="course-section-11-1-2-1">
+        <motion.div
+             variants={matches ? fadeSmallIn("up") :fadeBigIn("up")}
+             initial="hidden"
+             whileInView={'show'}
+             viewport={{ once: false, amount: 0.7 }}
+        id="course-section-11-1-2-1">
            <div id="course-section-11-1-2-1-1">
            <FaPhoneAlt id="course-section-11-1-2-2-phone" />
            </div>
@@ -938,8 +1135,13 @@ const productive_collaboration = [{
              <p id="course-section-11-1-2-1-2-p-1">Phone Number</p>
              <p id="course-section-11-1-2-1-2-p-2">+91 90437 21244</p>
            </div>
-        </div>
-        <div id="course-section-11-1-2-2">
+        </motion.div>
+        <motion.div
+             variants={matches ? fadeSmallIn("up") :fadeBigIn("up")}
+             initial="hidden"
+             whileInView={'show'}
+             viewport={{ once: false, amount: 0.7 }}
+        id="course-section-11-1-2-2">
         <div id="course-section-11-1-2-2-1">
            <MdEmail id="course-section-11-1-2-2-email" />
            </div>
@@ -947,8 +1149,13 @@ const productive_collaboration = [{
              <p id="course-section-11-1-2-2-2-p-1">Email</p>
              <p id="course-section-11-1-2-2-2-p-2">info@intwhizz.in</p>
            </div>
-        </div>
-        <div id="course-section-11-1-2-3">
+        </motion.div>
+        <motion.div
+             variants={matches ? fadeSmallIn("up") :fadeBigIn("up")}
+             initial="hidden"
+             whileInView={'show'}
+             viewport={{ once: false, amount: 0.7 }}
+        id="course-section-11-1-2-3">
         <div id="course-section-11-1-2-3-1">
            <IoLocationSharp id="course-section-11-1-2-3-location" />
            </div>
@@ -956,13 +1163,23 @@ const productive_collaboration = [{
              <p id="course-section-11-1-2-3-2-p-1">Address</p>
              <p id="course-section-11-1-2-3-2-p-2">3 A/1 1st Floor, 60 Feet Road, STC College Road, Near Indian Bank, Perumalpuram,Tirunelveli 627007</p>
            </div>
-        </div>
+        </motion.div>
      </div>
 
      <div id="course-section-11-1-3">
        <div id="course-section-11-1-3-1">
-         <div id="course-section-11-1-3-1-1">
-             <p id="course-section-11-1-3-1-1-p"> Get Enquiry Now </p> 
+         <motion.div
+           variants={matches ? fadeSmallIn("right") :fadeBigIn("right")}
+           initial="hidden"
+           whileInView={'show'}
+           viewport={{ once: false, amount: 0.7 }}
+         id="course-section-11-1-3-1-1">
+             <p
+                    variants={matches ? fadeSmallIn("right") :fadeBigIn("right")}
+                    initial="hidden"
+                    whileInView={'show'}
+                    viewport={{ once: false, amount: 0.7 }}
+             id="course-section-11-1-3-1-1-p"> Get Enquiry Now </p> 
              <div id="course-section-11-1-3-1-1-line">
              </div> 
              <div id="course-section-11-1-3-1-2">
@@ -983,10 +1200,15 @@ const productive_collaboration = [{
                 <button id="course-section-11-1-3-1-2-3-button">Enquiry Now</button>
                </form>
              </div>
-         </div>
-         <div id="course-section-11-1-3-1-3">
+         </motion.div>
+         <motion.div
+             variants={matches ? "none" :fadeBigIn("left")}
+             initial="hidden"
+             whileInView={'show'}
+             viewport={{ once: false, amount: 0.7 }}
+         id="course-section-11-1-3-1-3">
             <img id="course-section-11-1-3-1-3-img" src={img4} alt={img4} />
-         </div>
+         </motion.div>
        </div>
      </div>
 
